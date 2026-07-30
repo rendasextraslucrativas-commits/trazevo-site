@@ -28,6 +28,7 @@ import { Route as ModelosIndexRouteImport } from './routes/modelos.index'
 import { Route as ModelosBarbeariaPremiumRouteImport } from './routes/modelos.barbearia-premium'
 import { Route as ModelosClinicaEsteticaRouteImport } from './routes/modelos.clinica-estetica'
 import { Route as ModelosClinicaOdontologicaRouteImport } from './routes/modelos.clinica-odontologica'
+import { Route as ModelosEnergiaSolarRouteImport } from './routes/modelos.energia-solar'
 import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
 import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
 import { Route as PortfolioClinicaOdontologicaRouteImport } from './routes/portfolio.clinica-odontologica'
@@ -138,6 +139,11 @@ const ModelosClinicaOdontologicaRoute =
     path: '/modelos/clinica-odontologica',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ModelosEnergiaSolarRoute = ModelosEnergiaSolarRouteImport.update({
+  id: '/modelos/energia-solar',
+  path: '/modelos/energia-solar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
   id: '/portfolio/',
   path: '/portfolio/',
@@ -236,6 +242,7 @@ export interface FileRoutesByFullPath {
   '/modelos/barbearia-premium': typeof ModelosBarbeariaPremiumRoute
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
+  '/modelos/energia-solar': typeof ModelosEnergiaSolarRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/portfolio/clinica-odontologica': typeof PortfolioClinicaOdontologicaRoute
   '/blog/': typeof BlogIndexRoute
@@ -269,6 +276,7 @@ export interface FileRoutesByTo {
   '/modelos/barbearia-premium': typeof ModelosBarbeariaPremiumRoute
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
+  '/modelos/energia-solar': typeof ModelosEnergiaSolarRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/portfolio/clinica-odontologica': typeof PortfolioClinicaOdontologicaRoute
   '/blog': typeof BlogIndexRoute
@@ -305,6 +313,7 @@ export interface FileRoutesById {
   '/modelos/barbearia-premium': typeof ModelosBarbeariaPremiumRoute
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
+  '/modelos/energia-solar': typeof ModelosEnergiaSolarRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/portfolio/clinica-odontologica': typeof PortfolioClinicaOdontologicaRoute
   '/blog/': typeof BlogIndexRoute
@@ -341,6 +350,7 @@ export interface FileRouteTypes {
     | '/modelos/barbearia-premium'
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
+    | '/modelos/energia-solar'
     | '/portfolio/$slug'
     | '/portfolio/clinica-odontologica'
     | '/blog/'
@@ -374,6 +384,7 @@ export interface FileRouteTypes {
     | '/modelos/barbearia-premium'
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
+    | '/modelos/energia-solar'
     | '/portfolio/$slug'
     | '/portfolio/clinica-odontologica'
     | '/blog'
@@ -409,6 +420,7 @@ export interface FileRouteTypes {
     | '/modelos/barbearia-premium'
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
+    | '/modelos/energia-solar'
     | '/portfolio/$slug'
     | '/portfolio/clinica-odontologica'
     | '/blog/'
@@ -444,6 +456,7 @@ export interface RootRouteChildren {
   ModelosBarbeariaPremiumRoute: typeof ModelosBarbeariaPremiumRoute
   ModelosClinicaEsteticaRoute: typeof ModelosClinicaEsteticaRoute
   ModelosClinicaOdontologicaRoute: typeof ModelosClinicaOdontologicaRoute
+  ModelosEnergiaSolarRoute: typeof ModelosEnergiaSolarRoute
   PortfolioSlugRoute: typeof PortfolioSlugRoute
   PortfolioClinicaOdontologicaRoute: typeof PortfolioClinicaOdontologicaRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -585,6 +598,13 @@ declare module '@tanstack/react-router' {
       path: '/modelos/clinica-odontologica'
       fullPath: '/modelos/clinica-odontologica'
       preLoaderRoute: typeof ModelosClinicaOdontologicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modelos/energia-solar': {
+      id: '/modelos/energia-solar'
+      path: '/modelos/energia-solar'
+      fullPath: '/modelos/energia-solar'
+      preLoaderRoute: typeof ModelosEnergiaSolarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio/': {
@@ -745,6 +765,7 @@ const rootRouteChildren: RootRouteChildren = {
   ModelosBarbeariaPremiumRoute: ModelosBarbeariaPremiumRoute,
   ModelosClinicaEsteticaRoute: ModelosClinicaEsteticaRoute,
   ModelosClinicaOdontologicaRoute: ModelosClinicaOdontologicaRoute,
+  ModelosEnergiaSolarRoute: ModelosEnergiaSolarRoute,
   PortfolioSlugRoute: PortfolioSlugRoute,
   PortfolioClinicaOdontologicaRoute: PortfolioClinicaOdontologicaRoute,
   BlogIndexRoute: BlogIndexRoute,
