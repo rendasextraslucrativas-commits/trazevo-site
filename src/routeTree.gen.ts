@@ -25,6 +25,7 @@ import { Route as AuthenticatedPainelRouteImport } from './routes/_authenticated
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ModelosIndexRouteImport } from './routes/modelos.index'
+import { Route as ModelosBarbeariaPremiumRouteImport } from './routes/modelos.barbearia-premium'
 import { Route as ModelosClinicaEsteticaRouteImport } from './routes/modelos.clinica-estetica'
 import { Route as ModelosClinicaOdontologicaRouteImport } from './routes/modelos.clinica-odontologica'
 import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
@@ -119,6 +120,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 const ModelosIndexRoute = ModelosIndexRouteImport.update({
   id: '/modelos/',
   path: '/modelos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelosBarbeariaPremiumRoute = ModelosBarbeariaPremiumRouteImport.update({
+  id: '/modelos/barbearia-premium',
+  path: '/modelos/barbearia-premium',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ModelosClinicaEsteticaRoute = ModelosClinicaEsteticaRouteImport.update({
@@ -227,6 +233,7 @@ export interface FileRoutesByFullPath {
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/painel': typeof AuthenticatedPainelRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
+  '/modelos/barbearia-premium': typeof ModelosBarbeariaPremiumRoute
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
@@ -259,6 +266,7 @@ export interface FileRoutesByTo {
   '/redefinir-senha': typeof RedefinirSenhaRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/modelos/barbearia-premium': typeof ModelosBarbeariaPremiumRoute
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
@@ -294,6 +302,7 @@ export interface FileRoutesById {
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/_authenticated/painel': typeof AuthenticatedPainelRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
+  '/modelos/barbearia-premium': typeof ModelosBarbeariaPremiumRoute
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
@@ -329,6 +338,7 @@ export interface FileRouteTypes {
     | '/termos-de-uso'
     | '/painel'
     | '/blog/$slug'
+    | '/modelos/barbearia-premium'
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
     | '/portfolio/$slug'
@@ -361,6 +371,7 @@ export interface FileRouteTypes {
     | '/redefinir-senha'
     | '/termos-de-uso'
     | '/blog/$slug'
+    | '/modelos/barbearia-premium'
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
     | '/portfolio/$slug'
@@ -395,6 +406,7 @@ export interface FileRouteTypes {
     | '/termos-de-uso'
     | '/_authenticated/painel'
     | '/blog/$slug'
+    | '/modelos/barbearia-premium'
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
     | '/portfolio/$slug'
@@ -429,6 +441,7 @@ export interface RootRouteChildren {
   RedefinirSenhaRoute: typeof RedefinirSenhaRoute
   TermosDeUsoRoute: typeof TermosDeUsoRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  ModelosBarbeariaPremiumRoute: typeof ModelosBarbeariaPremiumRoute
   ModelosClinicaEsteticaRoute: typeof ModelosClinicaEsteticaRoute
   ModelosClinicaOdontologicaRoute: typeof ModelosClinicaOdontologicaRoute
   PortfolioSlugRoute: typeof PortfolioSlugRoute
@@ -551,6 +564,13 @@ declare module '@tanstack/react-router' {
       path: '/modelos'
       fullPath: '/modelos/'
       preLoaderRoute: typeof ModelosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modelos/barbearia-premium': {
+      id: '/modelos/barbearia-premium'
+      path: '/modelos/barbearia-premium'
+      fullPath: '/modelos/barbearia-premium'
+      preLoaderRoute: typeof ModelosBarbeariaPremiumRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/modelos/clinica-estetica': {
@@ -722,6 +742,7 @@ const rootRouteChildren: RootRouteChildren = {
   RedefinirSenhaRoute: RedefinirSenhaRoute,
   TermosDeUsoRoute: TermosDeUsoRoute,
   BlogSlugRoute: BlogSlugRoute,
+  ModelosBarbeariaPremiumRoute: ModelosBarbeariaPremiumRoute,
   ModelosClinicaEsteticaRoute: ModelosClinicaEsteticaRoute,
   ModelosClinicaOdontologicaRoute: ModelosClinicaOdontologicaRoute,
   PortfolioSlugRoute: PortfolioSlugRoute,
