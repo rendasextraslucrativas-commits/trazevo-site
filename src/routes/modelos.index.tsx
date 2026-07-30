@@ -14,7 +14,7 @@ export const Route = createFileRoute("/modelos/")({
       {
         name: "description",
         content:
-          "Modelos conceituais para clínica odontológica, estética, barbearia, energia solar, contabilidade e delivery, criados para demonstração.",
+          "Modelos conceituais para clínica odontológica, estética, barbearia, energia solar, restaurante e infoproduto, criados para demonstração.",
       },
       { property: "og:title", content: "Modelos demonstrativos de landing pages" },
       {
