@@ -280,7 +280,7 @@ function BravioPage() {
         </p>
 
         <header className="border-b border-[var(--bv-line)] bg-[var(--bv-black)]/95 backdrop-blur">
-          <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3">
+          <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 xl:flex xl:justify-between">
             <BravioLogo />
 
             <nav aria-label="Navegação principal" className="hidden items-center gap-5 xl:flex">
