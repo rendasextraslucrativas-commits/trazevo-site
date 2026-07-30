@@ -29,6 +29,7 @@ import { Route as ModelosBarbeariaPremiumRouteImport } from './routes/modelos.ba
 import { Route as ModelosClinicaEsteticaRouteImport } from './routes/modelos.clinica-estetica'
 import { Route as ModelosClinicaOdontologicaRouteImport } from './routes/modelos.clinica-odontologica'
 import { Route as ModelosEnergiaSolarRouteImport } from './routes/modelos.energia-solar'
+import { Route as ModelosInfoprodutoRouteImport } from './routes/modelos.infoproduto'
 import { Route as ModelosRestauranteCardapioDigitalRouteImport } from './routes/modelos.restaurante-cardapio-digital'
 import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
 import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
@@ -145,6 +146,11 @@ const ModelosEnergiaSolarRoute = ModelosEnergiaSolarRouteImport.update({
   path: '/modelos/energia-solar',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModelosInfoprodutoRoute = ModelosInfoprodutoRouteImport.update({
+  id: '/modelos/infoproduto',
+  path: '/modelos/infoproduto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ModelosRestauranteCardapioDigitalRoute =
   ModelosRestauranteCardapioDigitalRouteImport.update({
     id: '/modelos/restaurante-cardapio-digital',
@@ -250,6 +256,7 @@ export interface FileRoutesByFullPath {
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
   '/modelos/energia-solar': typeof ModelosEnergiaSolarRoute
+  '/modelos/infoproduto': typeof ModelosInfoprodutoRoute
   '/modelos/restaurante-cardapio-digital': typeof ModelosRestauranteCardapioDigitalRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/portfolio/clinica-odontologica': typeof PortfolioClinicaOdontologicaRoute
@@ -285,6 +292,7 @@ export interface FileRoutesByTo {
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
   '/modelos/energia-solar': typeof ModelosEnergiaSolarRoute
+  '/modelos/infoproduto': typeof ModelosInfoprodutoRoute
   '/modelos/restaurante-cardapio-digital': typeof ModelosRestauranteCardapioDigitalRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/portfolio/clinica-odontologica': typeof PortfolioClinicaOdontologicaRoute
@@ -323,6 +331,7 @@ export interface FileRoutesById {
   '/modelos/clinica-estetica': typeof ModelosClinicaEsteticaRoute
   '/modelos/clinica-odontologica': typeof ModelosClinicaOdontologicaRoute
   '/modelos/energia-solar': typeof ModelosEnergiaSolarRoute
+  '/modelos/infoproduto': typeof ModelosInfoprodutoRoute
   '/modelos/restaurante-cardapio-digital': typeof ModelosRestauranteCardapioDigitalRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/portfolio/clinica-odontologica': typeof PortfolioClinicaOdontologicaRoute
@@ -361,6 +370,7 @@ export interface FileRouteTypes {
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
     | '/modelos/energia-solar'
+    | '/modelos/infoproduto'
     | '/modelos/restaurante-cardapio-digital'
     | '/portfolio/$slug'
     | '/portfolio/clinica-odontologica'
@@ -396,6 +406,7 @@ export interface FileRouteTypes {
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
     | '/modelos/energia-solar'
+    | '/modelos/infoproduto'
     | '/modelos/restaurante-cardapio-digital'
     | '/portfolio/$slug'
     | '/portfolio/clinica-odontologica'
@@ -433,6 +444,7 @@ export interface FileRouteTypes {
     | '/modelos/clinica-estetica'
     | '/modelos/clinica-odontologica'
     | '/modelos/energia-solar'
+    | '/modelos/infoproduto'
     | '/modelos/restaurante-cardapio-digital'
     | '/portfolio/$slug'
     | '/portfolio/clinica-odontologica'
@@ -470,6 +482,7 @@ export interface RootRouteChildren {
   ModelosClinicaEsteticaRoute: typeof ModelosClinicaEsteticaRoute
   ModelosClinicaOdontologicaRoute: typeof ModelosClinicaOdontologicaRoute
   ModelosEnergiaSolarRoute: typeof ModelosEnergiaSolarRoute
+  ModelosInfoprodutoRoute: typeof ModelosInfoprodutoRoute
   ModelosRestauranteCardapioDigitalRoute: typeof ModelosRestauranteCardapioDigitalRoute
   PortfolioSlugRoute: typeof PortfolioSlugRoute
   PortfolioClinicaOdontologicaRoute: typeof PortfolioClinicaOdontologicaRoute
@@ -619,6 +632,13 @@ declare module '@tanstack/react-router' {
       path: '/modelos/energia-solar'
       fullPath: '/modelos/energia-solar'
       preLoaderRoute: typeof ModelosEnergiaSolarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modelos/infoproduto': {
+      id: '/modelos/infoproduto'
+      path: '/modelos/infoproduto'
+      fullPath: '/modelos/infoproduto'
+      preLoaderRoute: typeof ModelosInfoprodutoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/modelos/restaurante-cardapio-digital': {
@@ -787,6 +807,7 @@ const rootRouteChildren: RootRouteChildren = {
   ModelosClinicaEsteticaRoute: ModelosClinicaEsteticaRoute,
   ModelosClinicaOdontologicaRoute: ModelosClinicaOdontologicaRoute,
   ModelosEnergiaSolarRoute: ModelosEnergiaSolarRoute,
+  ModelosInfoprodutoRoute: ModelosInfoprodutoRoute,
   ModelosRestauranteCardapioDigitalRoute:
     ModelosRestauranteCardapioDigitalRoute,
   PortfolioSlugRoute: PortfolioSlugRoute,
