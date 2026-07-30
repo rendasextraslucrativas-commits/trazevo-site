@@ -4,4 +4,4 @@
  * Os componentes e rotas continuam no projeto — basta voltar para `true`
  * quando os mini sites demonstrativos estiverem finalizados.
  */
-export const SHOW_SHOWCASE = false;
+export const SHOW_SHOWCASE = true;
