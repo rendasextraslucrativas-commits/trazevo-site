@@ -98,93 +98,6 @@ export type Database = {
         }
         Relationships: []
       }
-      conversion_events: {
-        Row: {
-          created_at: string
-          event_type: string
-          id: string
-          label: string | null
-          metadata: Json | null
-          path: string | null
-          session_id: string | null
-        }
-        Insert: {
-          created_at?: string
-          event_type: string
-          id?: string
-          label?: string | null
-          metadata?: Json | null
-          path?: string | null
-          session_id?: string | null
-        }
-        Update: {
-          created_at?: string
-          event_type?: string
-          id?: string
-          label?: string | null
-          metadata?: Json | null
-          path?: string | null
-          session_id?: string | null
-        }
-        Relationships: []
-      }
-      demo_sites: {
-        Row: {
-          content: Json
-          cover_url: string | null
-          created_at: string
-          id: string
-          is_highlighted: boolean
-          is_master: boolean
-          is_published: boolean
-          meta_description: string | null
-          meta_title: string | null
-          name: string
-          niche: string
-          slug: string
-          sort_order: number
-          tags: string[]
-          theme: Json
-          updated_at: string
-        }
-        Insert: {
-          content?: Json
-          cover_url?: string | null
-          created_at?: string
-          id?: string
-          is_highlighted?: boolean
-          is_master?: boolean
-          is_published?: boolean
-          meta_description?: string | null
-          meta_title?: string | null
-          name: string
-          niche: string
-          slug: string
-          sort_order?: number
-          tags?: string[]
-          theme?: Json
-          updated_at?: string
-        }
-        Update: {
-          content?: Json
-          cover_url?: string | null
-          created_at?: string
-          id?: string
-          is_highlighted?: boolean
-          is_master?: boolean
-          is_published?: boolean
-          meta_description?: string | null
-          meta_title?: string | null
-          name?: string
-          niche?: string
-          slug?: string
-          sort_order?: number
-          tags?: string[]
-          theme?: Json
-          updated_at?: string
-        }
-        Relationships: []
-      }
       faqs: {
         Row: {
           answer: string
@@ -215,48 +128,6 @@ export type Database = {
           question?: string
           sort_order?: number
           updated_at?: string
-        }
-        Relationships: []
-      }
-      integrations: {
-        Row: {
-          created_at: string
-          id: string
-          inbound_key: string
-          notify_email: string | null
-          notify_on_lead: boolean
-          notify_on_project: boolean
-          updated_at: string
-          webhook_enabled: boolean
-          webhook_secret: string | null
-          webhook_url: string | null
-          whatsapp_notify_number: string | null
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          inbound_key?: string
-          notify_email?: string | null
-          notify_on_lead?: boolean
-          notify_on_project?: boolean
-          updated_at?: string
-          webhook_enabled?: boolean
-          webhook_secret?: string | null
-          webhook_url?: string | null
-          whatsapp_notify_number?: string | null
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          inbound_key?: string
-          notify_email?: string | null
-          notify_on_lead?: boolean
-          notify_on_project?: boolean
-          updated_at?: string
-          webhook_enabled?: boolean
-          webhook_secret?: string | null
-          webhook_url?: string | null
-          whatsapp_notify_number?: string | null
         }
         Relationships: []
       }
@@ -417,72 +288,6 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
-      }
-      notifications: {
-        Row: {
-          body: string | null
-          created_at: string
-          id: string
-          link: string | null
-          read_at: string | null
-          title: string
-          type: string
-        }
-        Insert: {
-          body?: string | null
-          created_at?: string
-          id?: string
-          link?: string | null
-          read_at?: string | null
-          title: string
-          type?: string
-        }
-        Update: {
-          body?: string | null
-          created_at?: string
-          id?: string
-          link?: string | null
-          read_at?: string | null
-          title?: string
-          type?: string
-        }
-        Relationships: []
-      }
-      page_views: {
-        Row: {
-          created_at: string
-          device: string | null
-          id: string
-          path: string
-          referrer: string | null
-          session_id: string | null
-          utm_campaign: string | null
-          utm_medium: string | null
-          utm_source: string | null
-        }
-        Insert: {
-          created_at?: string
-          device?: string | null
-          id?: string
-          path: string
-          referrer?: string | null
-          session_id?: string | null
-          utm_campaign?: string | null
-          utm_medium?: string | null
-          utm_source?: string | null
-        }
-        Update: {
-          created_at?: string
-          device?: string | null
-          id?: string
-          path?: string
-          referrer?: string | null
-          session_id?: string | null
-          utm_campaign?: string | null
-          utm_medium?: string | null
-          utm_source?: string | null
-        }
-        Relationships: []
       }
       plan_features: {
         Row: {
@@ -686,122 +491,6 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
-      }
-      project_tasks: {
-        Row: {
-          created_at: string
-          description: string | null
-          due_date: string | null
-          id: string
-          is_done: boolean
-          project_id: string
-          sort_order: number
-          title: string
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          description?: string | null
-          due_date?: string | null
-          id?: string
-          is_done?: boolean
-          project_id: string
-          sort_order?: number
-          title: string
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          description?: string | null
-          due_date?: string | null
-          id?: string
-          is_done?: boolean
-          project_id?: string
-          sort_order?: number
-          title?: string
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "project_tasks_project_id_fkey"
-            columns: ["project_id"]
-            isOneToOne: false
-            referencedRelation: "projects"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      projects: {
-        Row: {
-          client_contact: string | null
-          client_name: string
-          created_at: string
-          delivered_at: string | null
-          due_date: string | null
-          id: string
-          lead_id: string | null
-          live_url: string | null
-          notes: string | null
-          plan_id: string | null
-          price: number | null
-          progress: number
-          started_at: string | null
-          status: Database["public"]["Enums"]["project_status"]
-          title: string
-          updated_at: string
-        }
-        Insert: {
-          client_contact?: string | null
-          client_name: string
-          created_at?: string
-          delivered_at?: string | null
-          due_date?: string | null
-          id?: string
-          lead_id?: string | null
-          live_url?: string | null
-          notes?: string | null
-          plan_id?: string | null
-          price?: number | null
-          progress?: number
-          started_at?: string | null
-          status?: Database["public"]["Enums"]["project_status"]
-          title: string
-          updated_at?: string
-        }
-        Update: {
-          client_contact?: string | null
-          client_name?: string
-          created_at?: string
-          delivered_at?: string | null
-          due_date?: string | null
-          id?: string
-          lead_id?: string | null
-          live_url?: string | null
-          notes?: string | null
-          plan_id?: string | null
-          price?: number | null
-          progress?: number
-          started_at?: string | null
-          status?: Database["public"]["Enums"]["project_status"]
-          title?: string
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "projects_lead_id_fkey"
-            columns: ["lead_id"]
-            isOneToOne: false
-            referencedRelation: "leads"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "projects_plan_id_fkey"
-            columns: ["plan_id"]
-            isOneToOne: false
-            referencedRelation: "plans"
-            referencedColumns: ["id"]
-          },
-        ]
       }
       site_sections: {
         Row: {
@@ -1040,55 +729,24 @@ export type Database = {
         }
         Relationships: []
       }
-      webhook_deliveries: {
-        Row: {
-          created_at: string
-          event_type: string
-          id: string
-          payload: Json | null
-          response_body: string | null
-          status: string
-          status_code: number | null
-          target_url: string | null
-        }
-        Insert: {
-          created_at?: string
-          event_type: string
-          id?: string
-          payload?: Json | null
-          response_body?: string | null
-          status?: string
-          status_code?: number | null
-          target_url?: string | null
-        }
-        Update: {
-          created_at?: string
-          event_type?: string
-          id?: string
-          payload?: Json | null
-          response_body?: string | null
-          status?: string
-          status_code?: number | null
-          target_url?: string | null
-        }
-        Relationships: []
-      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      can_edit_content: { Args: { _user_id: string }; Returns: boolean }
+      can_manage_crm: { Args: { _user_id: string }; Returns: boolean }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
       app_role: "admin" | "comercial" | "editor" | "operacional"
       lead_priority: "baixa" | "media" | "alta"
-      project_status:
-        | "proposta"
-        | "producao"
-        | "revisao"
-        | "entregue"
-        | "pausado"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -1218,13 +876,6 @@ export const Constants = {
     Enums: {
       app_role: ["admin", "comercial", "editor", "operacional"],
       lead_priority: ["baixa", "media", "alta"],
-      project_status: [
-        "proposta",
-        "producao",
-        "revisao",
-        "entregue",
-        "pausado",
-      ],
     },
   },
 } as const
