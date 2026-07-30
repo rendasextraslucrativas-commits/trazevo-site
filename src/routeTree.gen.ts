@@ -9,81 +9,45 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
-import { Route as RedefinirSenhaRouteImport } from './routes/redefinir-senha'
-import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
-import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
-import { Route as PlanosRouteImport } from './routes/planos'
-import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
-import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
-import { Route as BeneficiosRouteImport } from './routes/beneficios'
-import { Route as AuthRouteImport } from './routes/auth'
-import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
-import { Route as ModelosIndexRouteImport } from './routes/modelos.index'
-import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as PortfolioClinicaOdontologicaRouteImport } from './routes/portfolio.clinica-odontologica'
-import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
-import { Route as ModelosClinicaOdontologicaRouteImport } from './routes/modelos.clinica-odontologica'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as BeneficiosRouteImport } from './routes/beneficios'
+import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as PlanosRouteImport } from './routes/planos'
+import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as RedefinirSenhaRouteImport } from './routes/redefinir-senha'
+import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
 import { Route as AuthenticatedPainelRouteImport } from './routes/_authenticated/painel'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ModelosIndexRouteImport } from './routes/modelos.index'
+import { Route as ModelosClinicaOdontologicaRouteImport } from './routes/modelos.clinica-odontologica'
+import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
+import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
+import { Route as PortfolioClinicaOdontologicaRouteImport } from './routes/portfolio.clinica-odontologica'
 import { Route as AuthenticatedPainelIndexRouteImport } from './routes/_authenticated/painel.index'
-import { Route as ApiPublicLeadsRouteImport } from './routes/api/public/leads'
-import { Route as AuthenticatedPainelVitrineRouteImport } from './routes/_authenticated/painel.vitrine'
-import { Route as AuthenticatedPainelProjetosRouteImport } from './routes/_authenticated/painel.projetos'
-import { Route as AuthenticatedPainelModelosRouteImport } from './routes/_authenticated/painel.modelos'
-import { Route as AuthenticatedPainelMidiaRouteImport } from './routes/_authenticated/painel.midia'
-import { Route as AuthenticatedPainelLeadsRouteImport } from './routes/_authenticated/painel.leads'
-import { Route as AuthenticatedPainelIntegracoesRouteImport } from './routes/_authenticated/painel.integracoes'
-import { Route as AuthenticatedPainelConteudoRouteImport } from './routes/_authenticated/painel.conteudo'
-import { Route as AuthenticatedPainelBlogRouteImport } from './routes/_authenticated/painel.blog'
 import { Route as AuthenticatedPainelAnalyticsRouteImport } from './routes/_authenticated/painel.analytics'
+import { Route as AuthenticatedPainelBlogRouteImport } from './routes/_authenticated/painel.blog'
+import { Route as AuthenticatedPainelConteudoRouteImport } from './routes/_authenticated/painel.conteudo'
+import { Route as AuthenticatedPainelIntegracoesRouteImport } from './routes/_authenticated/painel.integracoes'
+import { Route as AuthenticatedPainelLeadsRouteImport } from './routes/_authenticated/painel.leads'
+import { Route as AuthenticatedPainelMidiaRouteImport } from './routes/_authenticated/painel.midia'
+import { Route as AuthenticatedPainelModelosRouteImport } from './routes/_authenticated/painel.modelos'
+import { Route as AuthenticatedPainelProjetosRouteImport } from './routes/_authenticated/painel.projetos'
+import { Route as AuthenticatedPainelVitrineRouteImport } from './routes/_authenticated/painel.vitrine'
+import { Route as ApiPublicLeadsRouteImport } from './routes/api/public/leads'
 
-const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
-  id: '/termos-de-uso',
-  path: '/termos-de-uso',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RedefinirSenhaRoute = RedefinirSenhaRouteImport.update({
-  id: '/redefinir-senha',
-  path: '/redefinir-senha',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
-  id: '/politica-de-privacidade',
-  path: '/politica-de-privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
-  id: '/politica-de-cookies',
-  path: '/politica-de-cookies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlanosRoute = PlanosRouteImport.update({
-  id: '/planos',
-  path: '/planos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
-  id: '/perguntas-frequentes',
-  path: '/perguntas-frequentes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
-  id: '/como-funciona',
-  path: '/como-funciona',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BeneficiosRoute = BeneficiosRouteImport.update({
-  id: '/beneficios',
-  path: '/beneficios',
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -91,39 +55,69 @@ const AuthRoute = AuthRouteImport.update({
   path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
-  id: '/_authenticated',
+const BeneficiosRoute = BeneficiosRouteImport.update({
+  id: '/beneficios',
+  path: '/beneficios',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
+  id: '/como-funciona',
+  path: '/como-funciona',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
-  id: '/portfolio/',
-  path: '/portfolio/',
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ModelosIndexRoute = ModelosIndexRouteImport.update({
-  id: '/modelos/',
-  path: '/modelos/',
+const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
+  id: '/perguntas-frequentes',
+  path: '/perguntas-frequentes',
   getParentRoute: () => rootRouteImport,
+} as any)
+const PlanosRoute = PlanosRouteImport.update({
+  id: '/planos',
+  path: '/planos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
+  id: '/politica-de-cookies',
+  path: '/politica-de-cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RedefinirSenhaRoute = RedefinirSenhaRouteImport.update({
+  id: '/redefinir-senha',
+  path: '/redefinir-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
+  id: '/termos-de-uso',
+  path: '/termos-de-uso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedPainelRoute = AuthenticatedPainelRouteImport.update({
+  id: '/painel',
+  path: '/painel',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PortfolioClinicaOdontologicaRoute =
-  PortfolioClinicaOdontologicaRouteImport.update({
-    id: '/portfolio/clinica-odontologica',
-    path: '/portfolio/clinica-odontologica',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PortfolioSlugRoute = PortfolioSlugRouteImport.update({
-  id: '/portfolio/$slug',
-  path: '/portfolio/$slug',
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelosIndexRoute = ModelosIndexRouteImport.update({
+  id: '/modelos/',
+  path: '/modelos/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ModelosClinicaOdontologicaRoute =
@@ -132,55 +126,43 @@ const ModelosClinicaOdontologicaRoute =
     path: '/modelos/clinica-odontologica',
     getParentRoute: () => rootRouteImport,
   } as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
+const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
+  id: '/portfolio/',
+  path: '/portfolio/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedPainelRoute = AuthenticatedPainelRouteImport.update({
-  id: '/painel',
-  path: '/painel',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const PortfolioSlugRoute = PortfolioSlugRouteImport.update({
+  id: '/portfolio/$slug',
+  path: '/portfolio/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
+const PortfolioClinicaOdontologicaRoute =
+  PortfolioClinicaOdontologicaRouteImport.update({
+    id: '/portfolio/clinica-odontologica',
+    path: '/portfolio/clinica-odontologica',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AuthenticatedPainelIndexRoute =
   AuthenticatedPainelIndexRouteImport.update({
     id: '/',
     path: '/',
     getParentRoute: () => AuthenticatedPainelRoute,
   } as any)
-const ApiPublicLeadsRoute = ApiPublicLeadsRouteImport.update({
-  id: '/api/public/leads',
-  path: '/api/public/leads',
-  getParentRoute: () => rootRouteImport,
+const AuthenticatedPainelAnalyticsRoute =
+  AuthenticatedPainelAnalyticsRouteImport.update({
+    id: '/analytics',
+    path: '/analytics',
+    getParentRoute: () => AuthenticatedPainelRoute,
+  } as any)
+const AuthenticatedPainelBlogRoute = AuthenticatedPainelBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => AuthenticatedPainelRoute,
 } as any)
-const AuthenticatedPainelVitrineRoute =
-  AuthenticatedPainelVitrineRouteImport.update({
-    id: '/vitrine',
-    path: '/vitrine',
-    getParentRoute: () => AuthenticatedPainelRoute,
-  } as any)
-const AuthenticatedPainelProjetosRoute =
-  AuthenticatedPainelProjetosRouteImport.update({
-    id: '/projetos',
-    path: '/projetos',
-    getParentRoute: () => AuthenticatedPainelRoute,
-  } as any)
-const AuthenticatedPainelModelosRoute =
-  AuthenticatedPainelModelosRouteImport.update({
-    id: '/modelos',
-    path: '/modelos',
-    getParentRoute: () => AuthenticatedPainelRoute,
-  } as any)
-const AuthenticatedPainelMidiaRoute =
-  AuthenticatedPainelMidiaRouteImport.update({
-    id: '/midia',
-    path: '/midia',
-    getParentRoute: () => AuthenticatedPainelRoute,
-  } as any)
-const AuthenticatedPainelLeadsRoute =
-  AuthenticatedPainelLeadsRouteImport.update({
-    id: '/leads',
-    path: '/leads',
+const AuthenticatedPainelConteudoRoute =
+  AuthenticatedPainelConteudoRouteImport.update({
+    id: '/conteudo',
+    path: '/conteudo',
     getParentRoute: () => AuthenticatedPainelRoute,
   } as any)
 const AuthenticatedPainelIntegracoesRoute =
@@ -189,23 +171,41 @@ const AuthenticatedPainelIntegracoesRoute =
     path: '/integracoes',
     getParentRoute: () => AuthenticatedPainelRoute,
   } as any)
-const AuthenticatedPainelConteudoRoute =
-  AuthenticatedPainelConteudoRouteImport.update({
-    id: '/conteudo',
-    path: '/conteudo',
+const AuthenticatedPainelLeadsRoute =
+  AuthenticatedPainelLeadsRouteImport.update({
+    id: '/leads',
+    path: '/leads',
     getParentRoute: () => AuthenticatedPainelRoute,
   } as any)
-const AuthenticatedPainelBlogRoute = AuthenticatedPainelBlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => AuthenticatedPainelRoute,
+const AuthenticatedPainelMidiaRoute =
+  AuthenticatedPainelMidiaRouteImport.update({
+    id: '/midia',
+    path: '/midia',
+    getParentRoute: () => AuthenticatedPainelRoute,
+  } as any)
+const AuthenticatedPainelModelosRoute =
+  AuthenticatedPainelModelosRouteImport.update({
+    id: '/modelos',
+    path: '/modelos',
+    getParentRoute: () => AuthenticatedPainelRoute,
+  } as any)
+const AuthenticatedPainelProjetosRoute =
+  AuthenticatedPainelProjetosRouteImport.update({
+    id: '/projetos',
+    path: '/projetos',
+    getParentRoute: () => AuthenticatedPainelRoute,
+  } as any)
+const AuthenticatedPainelVitrineRoute =
+  AuthenticatedPainelVitrineRouteImport.update({
+    id: '/vitrine',
+    path: '/vitrine',
+    getParentRoute: () => AuthenticatedPainelRoute,
+  } as any)
+const ApiPublicLeadsRoute = ApiPublicLeadsRouteImport.update({
+  id: '/api/public/leads',
+  path: '/api/public/leads',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedPainelAnalyticsRoute =
-  AuthenticatedPainelAnalyticsRouteImport.update({
-    id: '/analytics',
-    path: '/analytics',
-    getParentRoute: () => AuthenticatedPainelRoute,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -428,74 +428,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/termos-de-uso': {
-      id: '/termos-de-uso'
-      path: '/termos-de-uso'
-      fullPath: '/termos-de-uso'
-      preLoaderRoute: typeof TermosDeUsoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/redefinir-senha': {
-      id: '/redefinir-senha'
-      path: '/redefinir-senha'
-      fullPath: '/redefinir-senha'
-      preLoaderRoute: typeof RedefinirSenhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/politica-de-privacidade': {
-      id: '/politica-de-privacidade'
-      path: '/politica-de-privacidade'
-      fullPath: '/politica-de-privacidade'
-      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/politica-de-cookies': {
-      id: '/politica-de-cookies'
-      path: '/politica-de-cookies'
-      fullPath: '/politica-de-cookies'
-      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/planos': {
-      id: '/planos'
-      path: '/planos'
-      fullPath: '/planos'
-      preLoaderRoute: typeof PlanosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/perguntas-frequentes': {
-      id: '/perguntas-frequentes'
-      path: '/perguntas-frequentes'
-      fullPath: '/perguntas-frequentes'
-      preLoaderRoute: typeof PerguntasFrequentesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/como-funciona': {
-      id: '/como-funciona'
-      path: '/como-funciona'
-      fullPath: '/como-funciona'
-      preLoaderRoute: typeof ComoFuncionaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/beneficios': {
-      id: '/beneficios'
-      path: '/beneficios'
-      fullPath: '/beneficios'
-      preLoaderRoute: typeof BeneficiosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/auth': {
-      id: '/auth'
-      path: '/auth'
-      fullPath: '/auth'
-      preLoaderRoute: typeof AuthRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated': {
@@ -505,60 +442,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/portfolio/': {
-      id: '/portfolio/'
-      path: '/portfolio'
-      fullPath: '/portfolio/'
-      preLoaderRoute: typeof PortfolioIndexRouteImport
+    '/beneficios': {
+      id: '/beneficios'
+      path: '/beneficios'
+      fullPath: '/beneficios'
+      preLoaderRoute: typeof BeneficiosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/modelos/': {
-      id: '/modelos/'
-      path: '/modelos'
-      fullPath: '/modelos/'
-      preLoaderRoute: typeof ModelosIndexRouteImport
+    '/como-funciona': {
+      id: '/como-funciona'
+      path: '/como-funciona'
+      fullPath: '/como-funciona'
+      preLoaderRoute: typeof ComoFuncionaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/': {
-      id: '/blog/'
-      path: '/blog'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/portfolio/clinica-odontologica': {
-      id: '/portfolio/clinica-odontologica'
-      path: '/portfolio/clinica-odontologica'
-      fullPath: '/portfolio/clinica-odontologica'
-      preLoaderRoute: typeof PortfolioClinicaOdontologicaRouteImport
+    '/perguntas-frequentes': {
+      id: '/perguntas-frequentes'
+      path: '/perguntas-frequentes'
+      fullPath: '/perguntas-frequentes'
+      preLoaderRoute: typeof PerguntasFrequentesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/portfolio/$slug': {
-      id: '/portfolio/$slug'
-      path: '/portfolio/$slug'
-      fullPath: '/portfolio/$slug'
-      preLoaderRoute: typeof PortfolioSlugRouteImport
+    '/planos': {
+      id: '/planos'
+      path: '/planos'
+      fullPath: '/planos'
+      preLoaderRoute: typeof PlanosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/modelos/clinica-odontologica': {
-      id: '/modelos/clinica-odontologica'
-      path: '/modelos/clinica-odontologica'
-      fullPath: '/modelos/clinica-odontologica'
-      preLoaderRoute: typeof ModelosClinicaOdontologicaRouteImport
+    '/politica-de-cookies': {
+      id: '/politica-de-cookies'
+      path: '/politica-de-cookies'
+      fullPath: '/politica-de-cookies'
+      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/redefinir-senha': {
+      id: '/redefinir-senha'
+      path: '/redefinir-senha'
+      fullPath: '/redefinir-senha'
+      preLoaderRoute: typeof RedefinirSenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos-de-uso': {
+      id: '/termos-de-uso'
+      path: '/termos-de-uso'
+      fullPath: '/termos-de-uso'
+      preLoaderRoute: typeof TermosDeUsoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated/painel': {
@@ -568,6 +519,55 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedPainelRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modelos/': {
+      id: '/modelos/'
+      path: '/modelos'
+      fullPath: '/modelos/'
+      preLoaderRoute: typeof ModelosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modelos/clinica-odontologica': {
+      id: '/modelos/clinica-odontologica'
+      path: '/modelos/clinica-odontologica'
+      fullPath: '/modelos/clinica-odontologica'
+      preLoaderRoute: typeof ModelosClinicaOdontologicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/': {
+      id: '/portfolio/'
+      path: '/portfolio'
+      fullPath: '/portfolio/'
+      preLoaderRoute: typeof PortfolioIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/$slug': {
+      id: '/portfolio/$slug'
+      path: '/portfolio/$slug'
+      fullPath: '/portfolio/$slug'
+      preLoaderRoute: typeof PortfolioSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/clinica-odontologica': {
+      id: '/portfolio/clinica-odontologica'
+      path: '/portfolio/clinica-odontologica'
+      fullPath: '/portfolio/clinica-odontologica'
+      preLoaderRoute: typeof PortfolioClinicaOdontologicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_authenticated/painel/': {
       id: '/_authenticated/painel/'
       path: '/'
@@ -575,60 +575,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedPainelIndexRouteImport
       parentRoute: typeof AuthenticatedPainelRoute
     }
-    '/api/public/leads': {
-      id: '/api/public/leads'
-      path: '/api/public/leads'
-      fullPath: '/api/public/leads'
-      preLoaderRoute: typeof ApiPublicLeadsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_authenticated/painel/vitrine': {
-      id: '/_authenticated/painel/vitrine'
-      path: '/vitrine'
-      fullPath: '/painel/vitrine'
-      preLoaderRoute: typeof AuthenticatedPainelVitrineRouteImport
-      parentRoute: typeof AuthenticatedPainelRoute
-    }
-    '/_authenticated/painel/projetos': {
-      id: '/_authenticated/painel/projetos'
-      path: '/projetos'
-      fullPath: '/painel/projetos'
-      preLoaderRoute: typeof AuthenticatedPainelProjetosRouteImport
-      parentRoute: typeof AuthenticatedPainelRoute
-    }
-    '/_authenticated/painel/modelos': {
-      id: '/_authenticated/painel/modelos'
-      path: '/modelos'
-      fullPath: '/painel/modelos'
-      preLoaderRoute: typeof AuthenticatedPainelModelosRouteImport
-      parentRoute: typeof AuthenticatedPainelRoute
-    }
-    '/_authenticated/painel/midia': {
-      id: '/_authenticated/painel/midia'
-      path: '/midia'
-      fullPath: '/painel/midia'
-      preLoaderRoute: typeof AuthenticatedPainelMidiaRouteImport
-      parentRoute: typeof AuthenticatedPainelRoute
-    }
-    '/_authenticated/painel/leads': {
-      id: '/_authenticated/painel/leads'
-      path: '/leads'
-      fullPath: '/painel/leads'
-      preLoaderRoute: typeof AuthenticatedPainelLeadsRouteImport
-      parentRoute: typeof AuthenticatedPainelRoute
-    }
-    '/_authenticated/painel/integracoes': {
-      id: '/_authenticated/painel/integracoes'
-      path: '/integracoes'
-      fullPath: '/painel/integracoes'
-      preLoaderRoute: typeof AuthenticatedPainelIntegracoesRouteImport
-      parentRoute: typeof AuthenticatedPainelRoute
-    }
-    '/_authenticated/painel/conteudo': {
-      id: '/_authenticated/painel/conteudo'
-      path: '/conteudo'
-      fullPath: '/painel/conteudo'
-      preLoaderRoute: typeof AuthenticatedPainelConteudoRouteImport
+    '/_authenticated/painel/analytics': {
+      id: '/_authenticated/painel/analytics'
+      path: '/analytics'
+      fullPath: '/painel/analytics'
+      preLoaderRoute: typeof AuthenticatedPainelAnalyticsRouteImport
       parentRoute: typeof AuthenticatedPainelRoute
     }
     '/_authenticated/painel/blog': {
@@ -638,12 +589,61 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedPainelBlogRouteImport
       parentRoute: typeof AuthenticatedPainelRoute
     }
-    '/_authenticated/painel/analytics': {
-      id: '/_authenticated/painel/analytics'
-      path: '/analytics'
-      fullPath: '/painel/analytics'
-      preLoaderRoute: typeof AuthenticatedPainelAnalyticsRouteImport
+    '/_authenticated/painel/conteudo': {
+      id: '/_authenticated/painel/conteudo'
+      path: '/conteudo'
+      fullPath: '/painel/conteudo'
+      preLoaderRoute: typeof AuthenticatedPainelConteudoRouteImport
       parentRoute: typeof AuthenticatedPainelRoute
+    }
+    '/_authenticated/painel/integracoes': {
+      id: '/_authenticated/painel/integracoes'
+      path: '/integracoes'
+      fullPath: '/painel/integracoes'
+      preLoaderRoute: typeof AuthenticatedPainelIntegracoesRouteImport
+      parentRoute: typeof AuthenticatedPainelRoute
+    }
+    '/_authenticated/painel/leads': {
+      id: '/_authenticated/painel/leads'
+      path: '/leads'
+      fullPath: '/painel/leads'
+      preLoaderRoute: typeof AuthenticatedPainelLeadsRouteImport
+      parentRoute: typeof AuthenticatedPainelRoute
+    }
+    '/_authenticated/painel/midia': {
+      id: '/_authenticated/painel/midia'
+      path: '/midia'
+      fullPath: '/painel/midia'
+      preLoaderRoute: typeof AuthenticatedPainelMidiaRouteImport
+      parentRoute: typeof AuthenticatedPainelRoute
+    }
+    '/_authenticated/painel/modelos': {
+      id: '/_authenticated/painel/modelos'
+      path: '/modelos'
+      fullPath: '/painel/modelos'
+      preLoaderRoute: typeof AuthenticatedPainelModelosRouteImport
+      parentRoute: typeof AuthenticatedPainelRoute
+    }
+    '/_authenticated/painel/projetos': {
+      id: '/_authenticated/painel/projetos'
+      path: '/projetos'
+      fullPath: '/painel/projetos'
+      preLoaderRoute: typeof AuthenticatedPainelProjetosRouteImport
+      parentRoute: typeof AuthenticatedPainelRoute
+    }
+    '/_authenticated/painel/vitrine': {
+      id: '/_authenticated/painel/vitrine'
+      path: '/vitrine'
+      fullPath: '/painel/vitrine'
+      preLoaderRoute: typeof AuthenticatedPainelVitrineRouteImport
+      parentRoute: typeof AuthenticatedPainelRoute
+    }
+    '/api/public/leads': {
+      id: '/api/public/leads'
+      path: '/api/public/leads'
+      fullPath: '/api/public/leads'
+      preLoaderRoute: typeof ApiPublicLeadsRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -713,3 +713,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
