@@ -14,6 +14,7 @@ import {
   TemplatesGrid,
 } from "@/components/site/sections";
 import { PortfolioGrid, TestimonialsGrid } from "@/components/site/showcase";
+import { ServicesSection } from "@/components/site/services-section";
 import { SiteShell } from "@/components/site/site-shell";
 import { SHOW_SHOWCASE } from "@/lib/feature-flags";
 import { siteContentQuery } from "@/lib/site-content.queries";
@@ -109,6 +110,8 @@ function Index() {
           <BenefitsGrid benefits={data.benefits} />
         </section>
       ) : null}
+
+      <ServicesSection />
 
       {servicos?.is_visible !== false ? (
         <section className="border-y border-border bg-surface">
