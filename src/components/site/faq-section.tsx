@@ -221,11 +221,11 @@ export function FaqSection() {
               value={faq.id}
               className="rounded-2xl border border-border bg-card px-5 shadow-[var(--shadow-soft)] transition-shadow duration-300 data-[state=open]:shadow-[var(--shadow-card)]"
             >
-              <AccordionTrigger className="py-5 text-base font-semibold text-brand hover:no-underline [&>svg]:hidden">
+              <AccordionTrigger className="py-5 text-base font-semibold text-brand hover:no-underline [&>svg]:hidden [&[data-state=open]_.icon-open]:hidden [&[data-state=closed]_.icon-close]:hidden">
                 <span className="flex items-center gap-3 pr-4 text-left">
                   <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
-                    <Plus className="h-4 w-4 data-[state=open]:hidden" aria-hidden />
-                    <Minus className="h-4 w-4 hidden data-[state=open]:block" aria-hidden />
+                    <Plus className="icon-open h-4 w-4" aria-hidden />
+                    <Minus className="icon-close h-4 w-4" aria-hidden />
                   </span>
                   {faq.question}
                 </span>
