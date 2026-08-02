@@ -23,7 +23,9 @@ export const getMe = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .handler(async ({ context }) => {
     // Garante o perfil e concede admin ao e-mail dono da agência no primeiro acesso.
-    await context.supabase.rpc("ensure_profile_and_bootstrap_admin");
+    // Executado no servidor (service role): a função não é chamável pelo cliente.
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    await supabaseAdmin.rpc("ensure_profile_and_bootstrap_admin", { _user_id: context.userId });
     const [profile, roles] = await Promise.all([
       context.supabase.from("profiles").select("*").eq("id", context.userId).maybeSingle(),
       context.supabase.from("user_roles").select("role").eq("user_id", context.userId),
