@@ -77,7 +77,7 @@ function Index() {
                 </Button>
                 {SHOW_SHOWCASE ? (
                   <Button asChild size="lg" variant="outline">
-                    <Link to="/modelos">Conhecer modelos</Link>
+                    <Link to="/" hash="portfolio">Ver portfólio</Link>
                   </Button>
                 ) : (
                   <Button asChild size="lg" variant="outline">
@@ -184,8 +184,7 @@ function Index() {
             Novos projetos estão chegando
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Estamos preparando modelos exclusivos de sites para diferentes segmentos. Em breve, você
-            poderá conhecer cada projeto desenvolvido pela SiteFluxo.
+            Estamos preparando novos projetos demonstrativos para diferentes segmentos.
           </p>
           <div className="mt-8">
             <Button asChild size="lg">
