@@ -17,6 +17,7 @@ import { ServicesSection } from "@/components/site/services-section";
 import { PricingSection } from "@/components/site/pricing-section";
 import { HowItWorksSection } from "@/components/site/how-it-works-section";
 import { PortfolioSection } from "@/components/site/portfolio-section";
+import { AboutSection } from "@/components/site/about-section";
 import { SiteShell } from "@/components/site/site-shell";
 import { SHOW_SHOWCASE } from "@/lib/feature-flags";
 import { siteContentQuery } from "@/lib/site-content.queries";
@@ -119,6 +120,8 @@ function Index() {
       <HowItWorksSection />
 
       <PortfolioSection />
+
+      <AboutSection />
 
       {servicos?.is_visible !== false ? (
         <section className="border-y border-border bg-surface">
