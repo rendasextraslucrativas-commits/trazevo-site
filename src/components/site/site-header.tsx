@@ -12,8 +12,7 @@ import { whatsappLink } from "@/lib/site-content.types";
 const allNavItems = [
   { label: "Início", to: "/", showcase: false },
   { label: "Benefícios", to: "/beneficios", showcase: false },
-  { label: "Modelos", to: "/modelos", showcase: true },
-  { label: "Portfólio", to: "/portfolio", showcase: true },
+  { label: "Portfólio", to: "/", hash: "portfolio", showcase: false },
   { label: "Blog", to: "/blog", showcase: false },
   { label: "Como funciona", to: "/como-funciona", showcase: false },
   { label: "Planos", to: "/planos", showcase: false },
