@@ -11,12 +11,12 @@ import {
   PlansGrid,
   ProcessList,
   SectionTitle,
-  TemplatesGrid,
 } from "@/components/site/sections";
 import { PortfolioGrid, TestimonialsGrid } from "@/components/site/showcase";
 import { ServicesSection } from "@/components/site/services-section";
 import { PricingSection } from "@/components/site/pricing-section";
 import { HowItWorksSection } from "@/components/site/how-it-works-section";
+import { PortfolioSection } from "@/components/site/portfolio-section";
 import { SiteShell } from "@/components/site/site-shell";
 import { SHOW_SHOWCASE } from "@/lib/feature-flags";
 import { siteContentQuery } from "@/lib/site-content.queries";
@@ -50,7 +50,6 @@ function Index() {
   const beneficios = findSection(data, "beneficios");
   const fluxo = findSection(data, "fluxo");
   const servicos = findSection(data, "servicos");
-  const modelos = findSection(data, "modelos");
   const processo = findSection(data, "processo");
   const sobre = findSection(data, "sobre");
   const faq = findSection(data, "faq");
@@ -78,7 +77,7 @@ function Index() {
                 </Button>
                 {SHOW_SHOWCASE ? (
                   <Button asChild size="lg" variant="outline">
-                    <Link to="/modelos">Conhecer modelos</Link>
+                    <Link to="/" hash="portfolio">Ver portfólio</Link>
                   </Button>
                 ) : (
                   <Button asChild size="lg" variant="outline">
@@ -119,6 +118,8 @@ function Index() {
 
       <HowItWorksSection />
 
+      <PortfolioSection />
+
       {servicos?.is_visible !== false ? (
         <section className="border-y border-border bg-surface">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
@@ -146,18 +147,6 @@ function Index() {
 
       {SHOW_SHOWCASE ? (
         <>
-          {modelos?.is_visible !== false ? (
-            <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-              <SectionTitle title={modelos?.title ?? ""} subtitle={modelos?.subtitle} />
-              <TemplatesGrid templates={(data.templates ?? []).slice(0, 3)} />
-              <div className="mt-8 text-center">
-                <Button asChild variant="outline">
-                  <Link to="/modelos">Ver todos os modelos</Link>
-                </Button>
-              </div>
-            </section>
-          ) : null}
-
           {(data.testimonials?.length ?? 0) > 0 ? (
             <section className="border-y border-border bg-surface">
               <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
@@ -195,8 +184,7 @@ function Index() {
             Novos projetos estão chegando
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Estamos preparando modelos exclusivos de sites para diferentes segmentos. Em breve, você
-            poderá conhecer cada projeto desenvolvido pela SiteFluxo.
+            Estamos preparando novos projetos demonstrativos para diferentes segmentos.
           </p>
           <div className="mt-8">
             <Button asChild size="lg">

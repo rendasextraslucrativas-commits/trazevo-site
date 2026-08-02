@@ -12,8 +12,7 @@ import { whatsappLink } from "@/lib/site-content.types";
 const allNavItems = [
   { label: "Início", to: "/", showcase: false },
   { label: "Benefícios", to: "/beneficios", showcase: false },
-  { label: "Modelos", to: "/modelos", showcase: true },
-  { label: "Portfólio", to: "/portfolio", showcase: true },
+  { label: "Portfólio", to: "/", hash: "portfolio", showcase: false },
   { label: "Blog", to: "/blog", showcase: false },
   { label: "Como funciona", to: "/como-funciona", showcase: false },
   { label: "Planos", to: "/planos", showcase: false },
@@ -51,8 +50,9 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navegação principal">
           {navItems.map((item) => (
             <Link
-              key={item.to}
+              key={item.label}
               to={item.to}
+              hash={(item as { hash?: string }).hash}
               className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
               activeProps={{ className: "text-foreground font-medium" }}
               activeOptions={{ exact: item.to === "/" }}
@@ -91,8 +91,9 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
               <nav className="mt-6 flex flex-col gap-1" aria-label="Navegação mobile">
                 {navItems.map((item) => (
                   <Link
-                    key={item.to}
+                    key={item.label}
                     to={item.to}
+                    hash={(item as { hash?: string }).hash}
                     onClick={() => setOpen(false)}
                     className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
                     activeProps={{ className: "text-foreground font-medium bg-surface" }}
