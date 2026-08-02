@@ -157,7 +157,7 @@ export function ContactSection() {
           consent: true,
         },
       });
-      trackEvent("lead", "contato_home");
+      trackEvent("contato", "contato_home");
       setLastSentAt(Date.now());
       setSent(true);
       setForm(emptyForm);
