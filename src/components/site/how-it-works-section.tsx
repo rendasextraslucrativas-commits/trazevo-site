@@ -61,7 +61,7 @@ const steps: Step[] = [
 
 export function HowItWorksSection() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+    <section id="como-funciona" className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
       <SectionTitle
         title="Seu site pronto em um processo simples e organizado"
         subtitle="Você acompanha todas as etapas do projeto, desde o planejamento inicial até a publicação do site."

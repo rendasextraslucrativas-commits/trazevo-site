@@ -99,7 +99,7 @@ const paymentTerms = [
 
 export function PricingSection() {
   return (
-    <section className="border-y border-border bg-surface">
+    <section id="planos" className="border-y border-border bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <SectionTitle
           title="Escolha a solução ideal para o seu negócio"

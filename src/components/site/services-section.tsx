@@ -79,7 +79,7 @@ const services: ServiceCard[] = [
 
 export function ServicesSection() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+    <section id="servicos" className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
       <SectionTitle
         title="Soluções digitais para fortalecer seu negócio"
         subtitle="Criamos sites modernos, rápidos e adaptados para celulares, desenvolvidos para apresentar sua empresa com profissionalismo e transformar visitantes em contatos."
