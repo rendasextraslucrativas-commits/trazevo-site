@@ -1078,7 +1078,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      ensure_profile_and_bootstrap_admin: { Args: never; Returns: string }
+      ensure_profile_and_bootstrap_admin: {
+        Args: { _user_id: string }
+        Returns: string
+      }
     }
     Enums: {
       app_role: "admin" | "comercial" | "editor" | "operacional"
