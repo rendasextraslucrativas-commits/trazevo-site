@@ -11,7 +11,6 @@ import {
   PlansGrid,
   ProcessList,
   SectionTitle,
-  TemplatesGrid,
 } from "@/components/site/sections";
 import { PortfolioGrid, TestimonialsGrid } from "@/components/site/showcase";
 import { ServicesSection } from "@/components/site/services-section";
@@ -51,7 +50,6 @@ function Index() {
   const beneficios = findSection(data, "beneficios");
   const fluxo = findSection(data, "fluxo");
   const servicos = findSection(data, "servicos");
-  const modelos = findSection(data, "modelos");
   const processo = findSection(data, "processo");
   const sobre = findSection(data, "sobre");
   const faq = findSection(data, "faq");
