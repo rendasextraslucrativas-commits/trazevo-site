@@ -15,6 +15,7 @@ import {
 } from "@/components/site/sections";
 import { PortfolioGrid, TestimonialsGrid } from "@/components/site/showcase";
 import { ServicesSection } from "@/components/site/services-section";
+import { PricingSection } from "@/components/site/pricing-section";
 import { SiteShell } from "@/components/site/site-shell";
 import { SHOW_SHOWCASE } from "@/lib/feature-flags";
 import { siteContentQuery } from "@/lib/site-content.queries";
@@ -112,6 +113,8 @@ function Index() {
       ) : null}
 
       <ServicesSection />
+
+      <PricingSection />
 
       {servicos?.is_visible !== false ? (
         <section className="border-y border-border bg-surface">
