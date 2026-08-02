@@ -120,6 +120,8 @@ function Index() {
 
       <HowItWorksSection />
 
+      <FaqSection />
+
       <PortfolioSection />
 
       <AboutSection />
