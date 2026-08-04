@@ -1,4 +1,4 @@
-import { MessageCircle, Plus, Minus } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { SectionTitle } from "./site-shell";
+import { WhatsAppIcon } from "./whatsapp-icon";
 
 const WHATSAPP = "https://wa.me/5500000000000";
 const CTA_MESSAGE = "Olá! Tenho uma dúvida sobre a criação de um site.";
@@ -251,7 +252,7 @@ export function FaqSection() {
             target="_blank"
             rel="noreferrer"
           >
-            <MessageCircle className="mr-2 h-4 w-4" aria-hidden />
+            <WhatsAppIcon className="mr-2 h-4 w-4" />
             Tirar minha dúvida
           </a>
         </Button>
