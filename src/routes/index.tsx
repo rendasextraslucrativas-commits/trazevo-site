@@ -125,8 +125,6 @@ function Index() {
         </section>
       ) : null}
 
-      <ServicesSection />
-
       <PricingSection />
 
       <HowItWorksSection />
@@ -138,15 +136,6 @@ function Index() {
       <PortfolioSection />
 
       <AboutSection />
-
-      {servicos?.is_visible !== false ? (
-        <section className="border-y border-border bg-surface">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-            <SectionTitle title={servicos?.title ?? ""} subtitle={servicos?.subtitle} />
-            <PlansGrid plans={data.plans} currency={data.settings?.currency ?? "BRL"} />
-          </div>
-        </section>
-      ) : null}
 
       {fluxo?.is_visible !== false ? (
         <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
@@ -164,74 +153,16 @@ function Index() {
         </section>
       ) : null}
 
-      {SHOW_SHOWCASE ? (
-        <>
-          {(data.testimonials?.length ?? 0) > 0 ? (
-            <section className="border-y border-border bg-surface">
-              <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-                <SectionTitle
-                  title="Quem já publicou com a gente"
-                  subtitle="Depoimentos demonstrativos que ilustram o formato de entrega."
-                />
-                <div className="mt-10">
-                  <TestimonialsGrid testimonials={(data.testimonials ?? []).slice(0, 3)} />
-                </div>
-              </div>
-            </section>
-          ) : null}
-
-          {(data.portfolio?.length ?? 0) > 0 ? (
-            <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-              <SectionTitle
-                title="Cases demonstrativos"
-                subtitle="Veja o desafio, a solução e o resultado esperado em cada nicho."
-              />
-              <div className="mt-10">
-                <PortfolioGrid items={(data.portfolio ?? []).slice(0, 3)} />
-              </div>
-              <div className="mt-8 text-center">
-                <Button asChild variant="outline">
-                  <Link to="/portfolio">Ver portfólio completo</Link>
-                </Button>
-              </div>
-            </section>
-          ) : null}
-        </>
-      ) : (
-        <section className="mx-auto max-w-3xl px-4 py-16 text-center sm:py-20">
-          <h2 className="text-2xl font-bold tracking-tight text-brand sm:text-3xl">
-            Novos projetos estão chegando
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            Estamos preparando novos projetos demonstrativos para diferentes segmentos.
-          </p>
-          <div className="mt-8">
-            <Button asChild size="lg">
-              <Link to="/contato">Quero criar meu site</Link>
-            </Button>
-          </div>
-        </section>
-      )}
-
-      {sobre?.is_visible !== false ? (
+      {SHOW_SHOWCASE && (data.testimonials?.length ?? 0) > 0 ? (
         <section className="border-y border-border bg-surface">
-          <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:py-20">
-            <h2 className="text-2xl font-bold tracking-tight text-brand sm:text-3xl">
-              {sobre?.title}
-            </h2>
-            <p className="mt-4 text-muted-foreground">{sobre?.subtitle}</p>
-          </div>
-        </section>
-      ) : null}
-
-      {faq?.is_visible !== false ? (
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-          <SectionTitle title={faq?.title ?? ""} subtitle={faq?.subtitle} />
-          <FaqAccordion faqs={data.faqs.slice(0, 6)} />
-          <div className="mt-8 text-center">
-            <Button asChild variant="outline">
-              <Link to="/perguntas-frequentes">Ver todas as perguntas</Link>
-            </Button>
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+            <SectionTitle
+              title="Quem já publicou com a gente"
+              subtitle="Depoimentos demonstrativos que ilustram o formato de entrega."
+            />
+            <div className="mt-10">
+              <TestimonialsGrid testimonials={(data.testimonials ?? []).slice(0, 3)} />
+            </div>
           </div>
         </section>
       ) : null}
