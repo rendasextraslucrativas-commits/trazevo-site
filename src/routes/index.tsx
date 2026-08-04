@@ -6,15 +6,12 @@ import { Button } from "@/components/ui/button";
 import { DeviceMockup } from "@/components/site/device-mockup";
 import {
   BenefitsGrid,
-  FaqAccordion,
   FinalCta,
   FlowDiagram,
-  PlansGrid,
   ProcessList,
   SectionTitle,
 } from "@/components/site/sections";
-import { PortfolioGrid, TestimonialsGrid } from "@/components/site/showcase";
-import { ServicesSection } from "@/components/site/services-section";
+import { TestimonialsGrid } from "@/components/site/showcase";
 import { PricingSection } from "@/components/site/pricing-section";
 import { HowItWorksSection } from "@/components/site/how-it-works-section";
 import { PortfolioSection } from "@/components/site/portfolio-section";
