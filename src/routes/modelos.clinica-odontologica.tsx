@@ -8,7 +8,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  MessageCircle,
   Phone,
   ShieldCheck,
   Smile,
@@ -18,6 +17,8 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
+
+import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 
 import heroImg from "@/assets/lumina-hero.jpg";
 import recepcaoImg from "@/assets/lumina-recepcao.jpg";
@@ -591,7 +592,7 @@ function LuminaPage() {
               rel="noreferrer"
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--lum-green)] px-6 py-4 text-base font-semibold text-[#06331f] transition hover:brightness-105"
             >
-              <MessageCircle className="h-5 w-5" aria-hidden />
+              <WhatsAppIcon className="h-5 w-5" />
               Agendar pelo WhatsApp
             </a>
           </div>
@@ -760,7 +761,7 @@ function LuminaPage() {
         aria-label="Agendar avaliação pelo WhatsApp"
         className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-[var(--lum-green)] text-[#06331f] shadow-lg transition hover:brightness-105"
       >
-        <MessageCircle className="h-6 w-6" aria-hidden />
+        <WhatsAppIcon className="h-6 w-6" />
       </a>
     </div>
   );

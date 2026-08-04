@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Globe2, Instagram, Mail, MessageCircle } from "lucide-react";
+import { Facebook, Globe2, Instagram, Mail } from "lucide-react";
 
 import type { SiteSettings } from "@/lib/site-content.types";
 import { trackEvent } from "./analytics-tracker";
@@ -9,6 +9,7 @@ import {
   CONTACT_WHATSAPP_NUMBER,
   waLink,
 } from "./contact-section";
+import { WhatsAppIcon } from "./whatsapp-icon";
 
 /* TEMPORÁRIO: substituir pelos perfis reais das redes sociais. */
 const SOCIAL_INSTAGRAM = "https://instagram.com/seuperfil";
@@ -77,7 +78,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
               onClick={() => trackEvent("whatsapp", "rodape_social")}
               className="text-ink-muted transition-colors hover:text-accent"
             >
-              <MessageCircle className="h-5 w-5" aria-hidden />
+              <WhatsAppIcon className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -125,7 +126,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
                 onClick={() => trackEvent("whatsapp", "rodape")}
                 className="inline-flex items-center gap-2 transition-colors hover:text-accent"
               >
-                <MessageCircle className="h-4 w-4" aria-hidden /> {CONTACT_WHATSAPP_NUMBER}
+                <WhatsAppIcon className="h-4 w-4" /> {CONTACT_WHATSAPP_NUMBER}
               </a>
             </li>
             <li>

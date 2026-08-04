@@ -8,7 +8,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  MessageCircle,
   Minus,
   Phone,
   Plus,
@@ -22,6 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import heroImg from "@/assets/vila-hero.jpg";
 import massaImg from "@/assets/vila-massa.jpg";
 import lancheImg from "@/assets/vila-lanche.jpg";
@@ -127,10 +127,10 @@ const products: Product[] = [
 const brl = (value: number) =>
   value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
-const beneficios: { icon: LucideIcon; title: string; text: string }[] = [
+const beneficios: { icon: React.ComponentType<{ className?: string }>; title: string; text: string }[] = [
   { icon: Leaf, title: "Ingredientes selecionados", text: "Pratos preparados com ingredientes escolhidos para oferecer mais sabor e qualidade." },
   { icon: ChefHat, title: "Preparo cuidadoso", text: "Cada pedido é preparado com atenção para proporcionar uma experiência especial." },
-  { icon: MessageCircle, title: "Pedido pelo WhatsApp", text: "Escolha seus produtos e envie o pedido diretamente para nossa equipe." },
+  { icon: WhatsAppIcon, title: "Pedido pelo WhatsApp", text: "Escolha seus produtos e envie o pedido diretamente para nossa equipe." },
   { icon: Truck, title: "Entrega ou retirada", text: "Escolha a opção mais conveniente no momento de concluir seu pedido." },
 ];
 
@@ -825,7 +825,7 @@ function SaborDaVilaPage() {
         aria-label="Fazer pedido pelo WhatsApp"
         className="fixed bottom-5 left-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[var(--sv-olive)] text-white shadow-lg transition-transform hover:scale-105"
       >
-        <MessageCircle className="h-6 w-6" aria-hidden />
+        <WhatsAppIcon className="h-6 w-6" />
       </a>
 
       {/* CARRINHO */}

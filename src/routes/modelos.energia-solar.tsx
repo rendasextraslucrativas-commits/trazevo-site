@@ -14,7 +14,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  MessageCircle,
   Phone,
   PiggyBank,
   Ruler,
@@ -27,6 +26,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import heroImg from "@/assets/solaris-hero.jpg";
 import equipeImg from "@/assets/solaris-equipe.jpg";
 import residenciaImg from "@/assets/solaris-residencia.jpg";
@@ -760,7 +760,7 @@ function SolarisPage() {
         className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full shadow-xl transition-transform hover:scale-105"
         style={{ background: "#25D366", color: "#fff" }}
       >
-        <MessageCircle className="h-6 w-6" />
+        <WhatsAppIcon className="h-6 w-6" />
       </a>
     </div>
   );

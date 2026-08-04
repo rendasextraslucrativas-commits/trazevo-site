@@ -10,7 +10,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  MessageCircle,
   Phone,
   ShieldCheck,
   Sparkles,
@@ -19,6 +18,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { WhatsAppIcon } from "@/components/site/whatsapp-icon";
 import heroImg from "@/assets/essenza-hero.jpg";
 import recepcaoImg from "@/assets/essenza-recepcao.jpg";
 import salaImg from "@/assets/essenza-sala.jpg";
@@ -644,7 +644,7 @@ function EssenzaPage() {
               rel="noreferrer"
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--ess-rose)] px-7 py-4 text-base font-semibold text-[#3B2A23] transition hover:brightness-105"
             >
-              <MessageCircle className="h-5 w-5" aria-hidden />
+              <WhatsAppIcon className="h-5 w-5" />
               Agendar pelo WhatsApp
             </a>
           </div>
@@ -809,7 +809,7 @@ function EssenzaPage() {
         aria-label="Falar pelo WhatsApp"
         className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:brightness-105"
       >
-        <MessageCircle className="h-6 w-6" aria-hidden />
+        <WhatsAppIcon className="h-6 w-6" />
       </a>
     </div>
   );

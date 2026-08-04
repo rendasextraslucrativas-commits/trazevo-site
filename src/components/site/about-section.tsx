@@ -1,8 +1,9 @@
-import { Handshake, MessageCircle, Smartphone, Sparkles, Target } from "lucide-react";
+import { Handshake, Smartphone, Sparkles, Target } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import workspaceImg from "@/assets/sobre-nos-workspace.jpg";
+import { WhatsAppIcon } from "./whatsapp-icon";
 
 const WHATSAPP_LINK =
   "https://wa.me/5500000000000?text=" +
@@ -151,7 +152,7 @@ export function AboutSection() {
           <div className="mt-6">
             <Button asChild size="lg">
               <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-                <MessageCircle className="mr-2 h-4 w-4" aria-hidden="true" />
+                <WhatsAppIcon className="mr-2 h-4 w-4" />
                 Conversar sobre meu projeto
               </a>
             </Button>
