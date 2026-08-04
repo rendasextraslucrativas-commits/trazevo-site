@@ -127,7 +127,7 @@ const products: Product[] = [
 const brl = (value: number) =>
   value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
-const beneficios: { icon: LucideIcon; title: string; text: string }[] = [
+const beneficios: { icon: React.ComponentType<{ className?: string }>; title: string; text: string }[] = [
   { icon: Leaf, title: "Ingredientes selecionados", text: "Pratos preparados com ingredientes escolhidos para oferecer mais sabor e qualidade." },
   { icon: ChefHat, title: "Preparo cuidadoso", text: "Cada pedido é preparado com atenção para proporcionar uma experiência especial." },
   { icon: WhatsAppIcon, title: "Pedido pelo WhatsApp", text: "Escolha seus produtos e envie o pedido diretamente para nossa equipe." },
