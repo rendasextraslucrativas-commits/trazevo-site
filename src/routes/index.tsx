@@ -51,10 +51,7 @@ function Index() {
   const hero = findSection(data, "hero");
   const beneficios = findSection(data, "beneficios");
   const fluxo = findSection(data, "fluxo");
-  const servicos = findSection(data, "servicos");
   const processo = findSection(data, "processo");
-  const sobre = findSection(data, "sobre");
-  const faq = findSection(data, "faq");
   const ctaFinal = findSection(data, "cta_final");
   const wa = whatsappLink(data.settings);
 
