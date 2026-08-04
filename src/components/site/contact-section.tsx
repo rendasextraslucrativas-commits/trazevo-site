@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
-import { Clock, Globe2, Mail, MessageCircle } from "lucide-react";
+import { Clock, Globe2, Mail } from "lucide-react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { SectionTitle } from "./site-shell";
 import { trackEvent } from "./analytics-tracker";
 import { submitLead } from "@/lib/site-content.functions";
+import { WhatsAppIcon } from "./whatsapp-icon";
 
 /* TEMPORÁRIO: substituir pelos dados reais de contato antes da publicação. */
 export const CONTACT_WHATSAPP_NUMBER = "(00) 00000-0000";
@@ -82,7 +83,7 @@ type Errors = Partial<Record<keyof FormState | "consent", string>>;
 
 const infoBlocks = [
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     title: "WhatsApp",
     lines: ["Atendimento comercial pelo WhatsApp", CONTACT_WHATSAPP_NUMBER],
   },
@@ -218,7 +219,7 @@ export function ContactSection() {
                 rel="noreferrer"
                 onClick={() => trackEvent("whatsapp", "contato_home")}
               >
-                <MessageCircle className="mr-2 h-4 w-4" aria-hidden />
+                <WhatsAppIcon className="mr-2 h-4 w-4" />
                 Chamar no WhatsApp
               </a>
             </Button>

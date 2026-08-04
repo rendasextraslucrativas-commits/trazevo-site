@@ -1,7 +1,6 @@
-import { MessageCircle } from "lucide-react";
-
 import { trackEvent } from "./analytics-tracker";
 import { waLink } from "./contact-section";
+import { WhatsAppIcon } from "./whatsapp-icon";
 
 export function WhatsappFloat() {
   return (
@@ -16,7 +15,7 @@ export function WhatsappFloat() {
       onClick={() => trackEvent("whatsapp", "botao_flutuante")}
       className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:h-16 sm:w-16"
     >
-      <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden />
+      <WhatsAppIcon className="h-7 w-7 sm:h-8 sm:w-8" />
       <span className="sr-only">Chamar no WhatsApp</span>
     </a>
   );
