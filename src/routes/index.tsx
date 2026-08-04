@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Check } from "lucide-react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 
 import { Button } from "@/components/ui/button";
@@ -102,6 +103,16 @@ function Index() {
                   </Button>
                 ) : null}
               </div>
+              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
+                {["Adaptado para celulares", "Integração com WhatsApp", "Atendimento personalizado"].map(
+                  (item) => (
+                    <li key={item} className="inline-flex items-center gap-2">
+                      <Check className="h-4 w-4 text-primary" aria-hidden />
+                      {item}
+                    </li>
+                  ),
+                )}
+              </ul>
             </div>
             <div className="pb-8">
               <DeviceMockup />
