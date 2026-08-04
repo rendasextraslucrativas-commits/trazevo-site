@@ -66,8 +66,9 @@ function Index() {
         <section className="border-b border-border bg-gradient-to-b from-surface to-background">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:grid-cols-2 lg:py-24">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary">
-                {data.settings?.agency_name ?? "Agência de Landing Pages"}
+              {/* TEMPORÁRIO: etiqueta neutra até a definição da marca. */}
+              <p className="inline-flex items-center rounded-full bg-brand-soft px-3 py-1.5 text-xs font-semibold tracking-wide text-brand-soft-foreground">
+                Sites profissionais para pequenos negócios
               </p>
               <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-brand sm:text-4xl lg:text-5xl">
                 {hero?.title}

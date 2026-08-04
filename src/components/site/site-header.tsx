@@ -34,7 +34,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
           {settings?.logo_url ? (
             <img
               src={settings.logo_url}
-              alt={settings.agency_name}
+              alt="Criação de Sites"
               className="h-8 w-auto"
               loading="lazy"
             />
@@ -42,8 +42,8 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
             <BrandMark className="h-9 w-9" />
           )}
           <span className="text-sm font-semibold tracking-tight text-brand sm:text-base">
-            {/* TEMPORÁRIO: substituir pelo nome definitivo da empresa. */}
-            {settings?.agency_name ?? "Criação de Sites"}
+            {/* TEMPORÁRIO: nome neutro até a definição da marca definitiva. */}
+            Criação de Sites
           </span>
         </Link>
 
