@@ -3,6 +3,7 @@ import { Facebook, Globe2, Instagram, Mail, MessageCircle } from "lucide-react";
 
 import type { SiteSettings } from "@/lib/site-content.types";
 import { trackEvent } from "./analytics-tracker";
+import { BrandMark } from "./brand-mark";
 import {
   CONTACT_EMAIL,
   CONTACT_WHATSAPP_NUMBER,
@@ -36,17 +37,16 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t border-ink bg-ink text-ink-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           {/* TEMPORÁRIO: espaço reservado para o logotipo definitivo. */}
           <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-background text-xs font-semibold text-muted-foreground">
-              logo
-            </span>
-            <span className="text-sm font-semibold text-brand">Criação de Sites</span>
+            <BrandMark className="h-9 w-9" tone="dark" />
+            {/* TEMPORÁRIO: substituir por nome/logotipo definitivo. */}
+            <span className="text-sm font-semibold text-ink-foreground">Criação de Sites</span>
           </div>
-          <p className="mt-4 max-w-xs text-sm text-muted-foreground">
+          <p className="mt-4 max-w-xs text-sm text-ink-muted">
             Criação de sites profissionais para empresas, prestadores de serviços e pequenos
             negócios.
           </p>
@@ -56,7 +56,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-ink-muted transition-colors hover:text-accent"
             >
               <Instagram className="h-5 w-5" aria-hidden />
             </a>
@@ -65,7 +65,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-ink-muted transition-colors hover:text-accent"
             >
               <Facebook className="h-5 w-5" aria-hidden />
             </a>
@@ -75,7 +75,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
               rel="noreferrer"
               aria-label="WhatsApp"
               onClick={() => trackEvent("whatsapp", "rodape_social")}
-              className="text-muted-foreground hover:text-foreground"
+              className="text-ink-muted transition-colors hover:text-accent"
             >
               <MessageCircle className="h-5 w-5" aria-hidden />
             </a>
@@ -83,11 +83,11 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
         </div>
 
         <nav aria-label="Rodapé — navegação">
-          <p className="text-sm font-semibold text-foreground">Navegação</p>
-          <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+          <p className="text-sm font-semibold text-ink-foreground">Navegação</p>
+          <ul className="mt-3 space-y-2 text-sm text-ink-muted">
             {navLinks.map((item) => (
               <li key={item.label}>
-                <Link to="/" hash={item.hash} className="hover:text-foreground">
+                <Link to="/" hash={item.hash} className="transition-colors hover:text-accent">
                   {item.label}
                 </Link>
               </li>
@@ -96,8 +96,8 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
         </nav>
 
         <nav aria-label="Rodapé — serviços">
-          <p className="text-sm font-semibold text-foreground">Serviços</p>
-          <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+          <p className="text-sm font-semibold text-ink-foreground">Serviços</p>
+          <ul className="mt-3 space-y-2 text-sm text-ink-muted">
             {serviceLinks.map((item) => (
               <li key={item.label}>
                 <a
@@ -105,7 +105,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => trackEvent("whatsapp", "rodape_servicos")}
-                  className="hover:text-foreground"
+                  className="transition-colors hover:text-accent"
                 >
                   {item.label}
                 </a>
@@ -115,15 +115,15 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
         </nav>
 
         <div>
-          <p className="text-sm font-semibold text-foreground">Contato</p>
-          <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+          <p className="text-sm font-semibold text-ink-foreground">Contato</p>
+          <ul className="mt-3 space-y-2 text-sm text-ink-muted">
             <li>
               <a
                 href={waLink("Olá! Gostaria de conversar sobre a criação de um site.")}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackEvent("whatsapp", "rodape")}
-                className="inline-flex items-center gap-2 hover:text-foreground"
+                className="inline-flex items-center gap-2 transition-colors hover:text-accent"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden /> {CONTACT_WHATSAPP_NUMBER}
               </a>
@@ -131,7 +131,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
             <li>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="inline-flex items-center gap-2 hover:text-foreground"
+                className="inline-flex items-center gap-2 transition-colors hover:text-accent"
               >
                 <Mail className="h-4 w-4" aria-hidden /> {CONTACT_EMAIL}
               </a>
@@ -141,7 +141,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
                 href={SOCIAL_INSTAGRAM}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 hover:text-foreground"
+                className="inline-flex items-center gap-2 transition-colors hover:text-accent"
               >
                 <Instagram className="h-4 w-4" aria-hidden /> Instagram
               </a>
@@ -153,23 +153,23 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
         </div>
       </div>
 
-      <div className="border-t border-border/70 py-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-xs text-muted-foreground sm:flex-row sm:justify-between">
+      <div className="border-t border-white/10 py-6">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-xs text-ink-muted sm:flex-row sm:justify-between">
           <p>© {year}. Todos os direitos reservados.</p>
           <nav aria-label="Rodapé — informações legais">
             <ul className="flex flex-wrap items-center justify-center gap-4">
               <li>
-                <Link to="/politica-de-privacidade" className="hover:text-foreground">
+                <Link to="/politica-de-privacidade" className="transition-colors hover:text-accent">
                   Política de Privacidade
                 </Link>
               </li>
               <li>
-                <Link to="/termos-de-uso" className="hover:text-foreground">
+                <Link to="/termos-de-uso" className="transition-colors hover:text-accent">
                   Termos de Uso
                 </Link>
               </li>
               <li>
-                <Link to="/politica-de-cookies" className="hover:text-foreground">
+                <Link to="/politica-de-cookies" className="transition-colors hover:text-accent">
                   Política de Cookies
                 </Link>
               </li>
