@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, MessageCircle } from "lucide-react";
+import { Menu } from "lucide-react";
 import { BrandMark } from "./brand-mark";
 import { useState } from "react";
 
@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { SHOW_SHOWCASE } from "@/lib/feature-flags";
 import type { SiteSettings } from "@/lib/site-content.types";
 import { whatsappLink } from "@/lib/site-content.types";
+import { WhatsAppIcon } from "./whatsapp-icon";
 
 const allNavItems = [
   { label: "Início", to: "/", showcase: false },
@@ -75,7 +76,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
                 aria-label="Conversar pelo WhatsApp"
                 onClick={() => trackEvent("whatsapp", "header")}
               >
-                <MessageCircle className="h-4 w-4" />
+                <WhatsAppIcon className="h-4 w-4" />
               </a>
             </Button>
           ) : null}
