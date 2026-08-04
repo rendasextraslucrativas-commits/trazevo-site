@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, MessageCircle } from "lucide-react";
+import { BrandMark } from "./brand-mark";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -27,23 +28,22 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
   const wa = whatsappLink(settings);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/85 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <Link to="/" className="flex items-center gap-2" aria-label="Página inicial">
           {settings?.logo_url ? (
             <img
               src={settings.logo_url}
-              alt={settings.agency_name}
+              alt="Criação de Sites"
               className="h-8 w-auto"
               loading="lazy"
             />
           ) : (
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand text-sm font-bold text-brand-foreground">
-              A
-            </span>
+            <BrandMark className="h-9 w-9" />
           )}
           <span className="text-sm font-semibold tracking-tight text-brand sm:text-base">
-            {settings?.agency_name ?? "Agência de Landing Pages"}
+            {/* TEMPORÁRIO: nome neutro até a definição da marca definitiva. */}
+            Criação de Sites
           </span>
         </Link>
 
