@@ -14,7 +14,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  MessageCircle,
   Phone,
   PiggyBank,
   Ruler,
