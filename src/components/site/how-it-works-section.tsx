@@ -59,16 +59,40 @@ const steps: Step[] = [
   },
 ];
 
-export function HowItWorksSection() {
+export function HowItWorksSection({
+  cmsSteps,
+  whatsappUrl,
+  title,
+  subtitle,
+}: {
+  cmsSteps?: { id: string; title: string; description: string | null }[];
+  whatsappUrl?: string | null;
+  title?: string | null;
+  subtitle?: string | null;
+} = {}) {
+  const items: Step[] =
+    cmsSteps && cmsSteps.length
+      ? cmsSteps.map((s, i) => ({
+          id: s.id,
+          icon: steps[i % steps.length].icon,
+          title: s.title,
+          description: s.description ?? "",
+        }))
+      : steps;
+  const ctaHref = whatsappUrl ?? `${WHATSAPP}?text=${encodeURIComponent(CTA_MESSAGE)}`;
+
   return (
     <section id="como-funciona" className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
       <SectionTitle
-        title="Seu site pronto em um processo simples e organizado"
-        subtitle="Você acompanha todas as etapas do projeto, desde o planejamento inicial até a publicação do site."
+        title={title || "Seu site pronto em um processo simples e organizado"}
+        subtitle={
+          subtitle ||
+          "Você acompanha todas as etapas do projeto, desde o planejamento inicial até a publicação do site."
+        }
       />
 
       <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-        {steps.map((step, index) => {
+        {items.map((step, index) => {
           const StepIcon = step.icon;
           return (
             <li
