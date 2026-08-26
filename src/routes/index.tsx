@@ -7,8 +7,6 @@ import { DeviceMockup } from "@/components/site/device-mockup";
 import {
   BenefitsGrid,
   FinalCta,
-  FlowDiagram,
-  ProcessList,
   SectionTitle,
 } from "@/components/site/sections";
 import { TestimonialsGrid } from "@/components/site/showcase";
