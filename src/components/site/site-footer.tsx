@@ -17,11 +17,11 @@ const SOCIAL_FACEBOOK = "https://facebook.com/seuperfil";
 
 const navLinks = [
   { label: "Início", hash: undefined },
-  { label: "Serviços", hash: "servicos" },
-  { label: "Portfólio", hash: "portfolio" },
-  { label: "Sobre nós", hash: "sobre-nos" },
+  { label: "Benefícios", hash: "beneficios" },
   { label: "Como funciona", hash: "como-funciona" },
+  { label: "Portfólio", hash: "portfolio" },
   { label: "Planos", hash: "planos" },
+  { label: "Sobre nós", hash: "sobre-nos" },
   { label: "Perguntas frequentes", hash: "perguntas-frequentes" },
   { label: "Contato", hash: "contato" },
 ] as const;

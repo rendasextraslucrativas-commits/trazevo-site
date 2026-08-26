@@ -7,8 +7,6 @@ import { DeviceMockup } from "@/components/site/device-mockup";
 import {
   BenefitsGrid,
   FinalCta,
-  FlowDiagram,
-  ProcessList,
   SectionTitle,
 } from "@/components/site/sections";
 import { TestimonialsGrid } from "@/components/site/showcase";
@@ -116,59 +114,51 @@ function Index() {
       ) : null}
 
       {beneficios?.is_visible !== false ? (
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <section id="beneficios" className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
           <SectionTitle title={beneficios?.title ?? ""} subtitle={beneficios?.subtitle} />
           <BenefitsGrid benefits={data.benefits} />
         </section>
       ) : null}
 
+      {processo?.is_visible !== false || fluxo?.is_visible !== false ? (
+        <div className="border-y border-border bg-surface">
+          <HowItWorksSection
+            cmsSteps={data.steps}
+            whatsappUrl={wa}
+            title={processo?.title ?? fluxo?.title}
+            subtitle={processo?.subtitle ?? fluxo?.subtitle}
+          />
+        </div>
+      ) : null}
+
+      <PortfolioSection />
+
       <PricingSection />
 
-      <HowItWorksSection />
+      {SHOW_SHOWCASE && (data.testimonials?.length ?? 0) > 0 ? (
+        <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+          <SectionTitle
+            title="Quem já publicou com a gente"
+            subtitle="Depoimentos demonstrativos que ilustram o formato de entrega."
+          />
+          <div className="mt-10">
+            <TestimonialsGrid testimonials={(data.testimonials ?? []).slice(0, 3)} />
+          </div>
+        </section>
+      ) : null}
+
+      <AboutSection />
 
       <FaqSection />
 
       <ContactSection />
-
-      <PortfolioSection />
-
-      <AboutSection />
-
-      {fluxo?.is_visible !== false ? (
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-          <SectionTitle title={fluxo?.title ?? ""} subtitle={fluxo?.subtitle} />
-          <FlowDiagram />
-        </section>
-      ) : null}
-
-      {processo?.is_visible !== false ? (
-        <section className="border-y border-border bg-surface">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-            <SectionTitle title={processo?.title ?? ""} subtitle={processo?.subtitle} />
-            <ProcessList steps={data.steps} />
-          </div>
-        </section>
-      ) : null}
-
-      {SHOW_SHOWCASE && (data.testimonials?.length ?? 0) > 0 ? (
-        <section className="border-y border-border bg-surface">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-            <SectionTitle
-              title="Quem já publicou com a gente"
-              subtitle="Depoimentos demonstrativos que ilustram o formato de entrega."
-            />
-            <div className="mt-10">
-              <TestimonialsGrid testimonials={(data.testimonials ?? []).slice(0, 3)} />
-            </div>
-          </div>
-        </section>
-      ) : null}
 
       <FinalCta
         settings={data.settings}
         title={ctaFinal?.title ?? "Pronto para apresentar seu negócio de forma profissional?"}
         subtitle={ctaFinal?.subtitle}
       />
+
       <WhatsappFloat />
     </SiteShell>
   );
