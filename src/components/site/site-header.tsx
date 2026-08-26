@@ -56,7 +56,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
               hash={(item as { hash?: string }).hash}
               className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
               activeProps={{ className: "text-foreground font-medium" }}
-              activeOptions={{ exact: item.to === "/" }}
+              activeOptions={{ exact: item.to === "/", includeHash: true }}
             >
               {item.label}
             </Link>
@@ -98,7 +98,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
                     onClick={() => setOpen(false)}
                     className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
                     activeProps={{ className: "text-foreground font-medium bg-surface" }}
-                    activeOptions={{ exact: item.to === "/" }}
+                    activeOptions={{ exact: item.to === "/", includeHash: true }}
                   >
                     {item.label}
                   </Link>

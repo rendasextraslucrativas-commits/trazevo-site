@@ -114,7 +114,7 @@ function Index() {
       ) : null}
 
       {beneficios?.is_visible !== false ? (
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <section id="beneficios" className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
           <SectionTitle title={beneficios?.title ?? ""} subtitle={beneficios?.subtitle} />
           <BenefitsGrid benefits={data.benefits} />
         </section>
