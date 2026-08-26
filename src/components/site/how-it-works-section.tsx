@@ -138,11 +138,7 @@ export function HowItWorksSection({
           empresa.
         </p>
         <Button asChild size="lg" className="mt-6">
-          <a
-            href={`${WHATSAPP}?text=${encodeURIComponent(CTA_MESSAGE)}`}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={ctaHref} target="_blank" rel="noreferrer">
             Falar sobre meu projeto
           </a>
         </Button>
