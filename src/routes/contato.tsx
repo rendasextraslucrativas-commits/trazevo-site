@@ -25,7 +25,9 @@ import { trackEvent } from "@/components/site/analytics-tracker";
 import { whatsappLink } from "@/lib/site-content.types";
 
 export const Route = createFileRoute("/contato")({
-  validateSearch: (search: Record<string, unknown>) => ({
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): { modelo?: string; origem?: string; url?: string } => ({
     modelo: typeof search.modelo === "string" ? search.modelo.slice(0, 120) : undefined,
     origem: typeof search.origem === "string" ? search.origem.slice(0, 60) : undefined,
     url: typeof search.url === "string" ? search.url.slice(0, 400) : undefined,
