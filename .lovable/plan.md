@@ -1,5 +1,10 @@
 # Organizar o site com estrutura profissional
 
+## Correção prévia (bloqueia o build)
+
+A página `/contato` declara parâmetros de URL (`modelo`, `origem`, `url`) de forma que o TypeScript passou a exigi-los em todo link para `/contato` — isso quebra o build em `sections.tsx`, `site-header.tsx` e `index.tsx`. Correção: declarar esses parâmetros explicitamente como opcionais no retorno de `validateSearch` em `src/routes/contato.tsx` (tipo `{ modelo?: string; origem?: string; url?: string }`), sem alterar nenhum link.
+
+
 Objetivo: uma jornada única e clara na home (do problema à ação), sem seções repetidas, com ritmo visual consistente e navegação que aponta para o lugar certo.
 
 ## O que está desorganizado hoje
