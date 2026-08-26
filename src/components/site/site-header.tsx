@@ -13,13 +13,13 @@ import { WhatsAppIcon } from "./whatsapp-icon";
 
 const allNavItems = [
   { label: "Início", to: "/", showcase: false },
-  { label: "Benefícios", to: "/beneficios", showcase: false },
+  { label: "Benefícios", to: "/", hash: "beneficios", showcase: false },
+  { label: "Como funciona", to: "/", hash: "como-funciona", showcase: false },
   { label: "Portfólio", to: "/", hash: "portfolio", showcase: false },
+  { label: "Planos", to: "/", hash: "planos", showcase: false },
+  { label: "Perguntas frequentes", to: "/", hash: "perguntas-frequentes", showcase: false },
   { label: "Blog", to: "/blog", showcase: false },
-  { label: "Como funciona", to: "/como-funciona", showcase: false },
-  { label: "Planos", to: "/planos", showcase: false },
-  { label: "Perguntas frequentes", to: "/perguntas-frequentes", showcase: false },
-  { label: "Contato", to: "/contato", showcase: false },
+  { label: "Contato", to: "/", hash: "contato", showcase: false },
 ] as const;
 
 const navItems = allNavItems.filter((item) => SHOW_SHOWCASE || !item.showcase);
