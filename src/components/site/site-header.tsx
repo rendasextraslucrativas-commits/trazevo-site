@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
-import { BrandMark } from "./brand-mark";
+import { BrandLogo } from "./brand-mark";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
