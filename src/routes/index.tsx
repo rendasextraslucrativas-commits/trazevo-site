@@ -27,18 +27,19 @@ export const Route = createFileRoute("/")({
   loader: ({ context }) => context.queryClient.ensureQueryData(siteContentQuery),
   head: () => ({
     meta: [
-      { title: "Agência de Landing Pages | Páginas que geram contatos" },
+      { title: "TRAZEVO | Sites profissionais para negócios que querem crescer" },
       {
         name: "description",
         content:
-          "Criamos landing pages modernas, rápidas e estratégicas para apresentar seu negócio, gerar contatos e facilitar o atendimento pelo WhatsApp.",
+          "A TRAZEVO cria sites profissionais, landing pages e catálogos digitais para pequenos negócios, empresas locais e prestadores de serviços.",
       },
-      { property: "og:title", content: "Agência de Landing Pages" },
+      { property: "og:title", content: "TRAZEVO | Sites profissionais" },
       {
         property: "og:description",
         content:
-          "Landing pages profissionais para transformar visitantes em oportunidades reais de contato.",
+          "Sites profissionais, landing pages e catálogos digitais para negócios que querem crescer.",
       },
+      { property: "og:url", content: "https://sunshine-stack-start.lovable.app/" },
     ],
   }),
   component: Index,
