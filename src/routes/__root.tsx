@@ -82,13 +82,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Agência de Landing Pages" },
+      { title: "TRAZEVO | Sites profissionais para negócios que querem crescer" },
       {
         name: "description",
         content:
-          "Criação de landing pages profissionais para gerar contatos e apresentar seu negócio.",
+          "TRAZEVO cria sites profissionais, landing pages e catálogos digitais para pequenos negócios, empresas locais e prestadores de serviços.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "TRAZEVO" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
