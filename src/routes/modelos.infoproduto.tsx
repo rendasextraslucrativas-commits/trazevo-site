@@ -36,9 +36,9 @@ import conteudoImg from "@/assets/fotopro-conteudo.jpg";
 import urbanaImg from "@/assets/fotopro-urbana.jpg";
 
 const CANONICAL = "https://sunshine-stack-start.lovable.app/modelos/infoproduto";
-const TITLE = "FotoPro Mobile | Projeto demonstrativo SiteFluxo";
+const TITLE = "FotoPro Mobile | Projeto demonstrativo TRAZEVO";
 const DESCRIPTION =
-  "Modelo demonstrativo de landing page para curso online e infoproduto desenvolvido pela SiteFluxo.";
+  "Modelo demonstrativo de landing page para curso online e infoproduto desenvolvido pela TRAZEVO.";
 
 export const Route = createFileRoute("/modelos/infoproduto")({
   head: () => ({
@@ -307,7 +307,7 @@ const faqs = [
   },
   {
     q: "Como faço a inscrição?",
-    a: "Nenhuma inscrição será processada. Os botões abrem apenas um aviso informando que se trata de uma demonstração da SiteFluxo.",
+    a: "Nenhuma inscrição será processada. Os botões abrem apenas um aviso informando que se trata de uma demonstração da TRAZEVO.",
   },
 ];
 
@@ -333,7 +333,7 @@ function Faixa() {
       className="px-4 py-2.5 text-center text-[12px] leading-snug text-white sm:text-[13px]"
       style={{ background: "linear-gradient(90deg, var(--fp-roxo), var(--fp-azul))" }}
     >
-      Projeto demonstrativo desenvolvido pela SiteFluxo. O curso, a oferta e todas as informações
+      Projeto demonstrativo desenvolvido pela TRAZEVO. O curso, a oferta e todas as informações
       apresentadas são fictícios.
     </div>
   );
@@ -898,7 +898,7 @@ function FotoProPage() {
               Quero conhecer o curso
             </button>
             <a href="/" className={ctaGhost} style={{ borderColor: "var(--fp-linha)", color: "var(--fp-texto)" }}>
-              Conhecer a SiteFluxo
+              Conhecer a TRAZEVO
             </a>
           </div>
         </section>
@@ -960,7 +960,7 @@ function FotoProPage() {
           <p>
             Projeto conceitual desenvolvido pela{" "}
             <a href="/" className="font-semibold underline" style={{ color: "var(--fp-roxo)" }}>
-              SiteFluxo
+              TRAZEVO
             </a>
             .
           </p>
@@ -981,7 +981,7 @@ function FotoProPage() {
               <Smartphone className="h-6 w-6" aria-hidden />
             </span>
             <p className="mt-5 text-[15px] leading-relaxed" style={{ color: "var(--fp-texto)" }}>
-              Este é um projeto demonstrativo desenvolvido pela SiteFluxo. Nenhuma compra ou inscrição
+              Este é um projeto demonstrativo desenvolvido pela TRAZEVO. Nenhuma compra ou inscrição
               real será processada.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -994,7 +994,7 @@ function FotoProPage() {
                 Fechar
               </button>
               <a href="/" className={`${cta} flex-1`} style={ctaBg}>
-                Conhecer a SiteFluxo
+                Conhecer a TRAZEVO
               </a>
             </div>
           </div>

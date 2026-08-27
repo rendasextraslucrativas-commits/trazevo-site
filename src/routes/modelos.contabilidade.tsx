@@ -29,7 +29,7 @@ const wa = (message: string) => `${WHATSAPP}?text=${encodeURIComponent(message)}
 export const Route = createFileRoute("/modelos/contabilidade")({
   head: () => ({
     meta: [
-      { title: "Prime Contábil | Projeto demonstrativo SiteFluxo" },
+      { title: "Prime Contábil | Projeto demonstrativo TRAZEVO" },
       {
         name: "description",
         content:

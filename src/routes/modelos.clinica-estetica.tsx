@@ -26,9 +26,9 @@ import facialImg from "@/assets/essenza-facial.jpg";
 import relaxImg from "@/assets/essenza-relax.jpg";
 
 const CANONICAL = "https://sunshine-stack-start.lovable.app/modelos/clinica-estetica";
-const TITLE = "Essenza Clínica de Estética | Projeto demonstrativo SiteFluxo";
+const TITLE = "Essenza Clínica de Estética | Projeto demonstrativo TRAZEVO";
 const DESCRIPTION =
-  "Modelo demonstrativo de site para clínica de estética desenvolvido pela SiteFluxo.";
+  "Modelo demonstrativo de site para clínica de estética desenvolvido pela TRAZEVO.";
 
 const WHATS = "5511999991111";
 const wa = (message: string) => `https://wa.me/${WHATS}?text=${encodeURIComponent(message)}`;
@@ -275,7 +275,7 @@ function EssenzaPage() {
     >
       <div className="fixed inset-x-0 top-0 z-50">
         <p className="bg-[var(--ess-brown-deep)] px-4 py-2 text-center text-[11px] leading-snug text-white/85 sm:text-xs">
-          Projeto demonstrativo desenvolvido pela SiteFluxo. Todas as informações apresentadas são
+          Projeto demonstrativo desenvolvido pela TRAZEVO. Todas as informações apresentadas são
           fictícias.
         </p>
 
@@ -790,7 +790,7 @@ function EssenzaPage() {
             <p>
               Projeto conceitual desenvolvido pela{" "}
               <Link to="/" className="font-semibold text-[var(--ess-brown)] underline">
-                SiteFluxo
+                TRAZEVO
               </Link>
               .
             </p>

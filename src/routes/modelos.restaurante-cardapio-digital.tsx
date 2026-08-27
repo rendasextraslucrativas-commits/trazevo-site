@@ -33,9 +33,9 @@ import bebidaImg from "@/assets/vila-bebida.jpg";
 
 const CANONICAL =
   "https://sunshine-stack-start.lovable.app/modelos/restaurante-cardapio-digital";
-const TITLE = "Sabor da Vila | Cardápio demonstrativo SiteFluxo";
+const TITLE = "Sabor da Vila | Cardápio demonstrativo TRAZEVO";
 const DESCRIPTION =
-  "Modelo demonstrativo de site para restaurante com cardápio digital e pedidos pelo WhatsApp, desenvolvido pela SiteFluxo.";
+  "Modelo demonstrativo de site para restaurante com cardápio digital e pedidos pelo WhatsApp, desenvolvido pela TRAZEVO.";
 
 const WHATS = "5511999995555";
 const wa = (message: string) => `https://wa.me/${WHATS}?text=${encodeURIComponent(message)}`;
@@ -268,7 +268,7 @@ function SaborDaVilaPage() {
   return (
     <div style={palette} className="min-h-screen bg-[var(--sv-cream)] text-[var(--sv-brown)]">
       <p className="bg-[var(--sv-brown)] px-4 py-2 text-center text-xs leading-relaxed text-[var(--sv-beige)] sm:text-sm">
-        Projeto demonstrativo desenvolvido pela SiteFluxo. Produtos, preços, contatos e
+        Projeto demonstrativo desenvolvido pela TRAZEVO. Produtos, preços, contatos e
         informações são fictícios.
       </p>
 
@@ -806,7 +806,7 @@ function SaborDaVilaPage() {
           <p>
             Projeto conceitual desenvolvido pela{" "}
             <a href="/" className="font-semibold text-[var(--sv-terra)] hover:underline">
-              SiteFluxo
+              TRAZEVO
             </a>
             .
           </p>
