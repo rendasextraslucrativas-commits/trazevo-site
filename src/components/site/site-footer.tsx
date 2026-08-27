@@ -3,7 +3,7 @@ import { Facebook, Globe2, Instagram, Mail } from "lucide-react";
 
 import type { SiteSettings } from "@/lib/site-content.types";
 import { trackEvent } from "./analytics-tracker";
-import { BrandMark } from "./brand-mark";
+import { BrandLogo } from "./brand-mark";
 import {
   CONTACT_EMAIL,
   CONTACT_WHATSAPP_NUMBER,
@@ -154,7 +154,7 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
 
       <div className="border-t border-white/10 py-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-xs text-ink-muted sm:flex-row sm:justify-between">
-          <p>© {year}. Todos os direitos reservados.</p>
+          <p>© {year} TRAZEVO. Todos os direitos reservados.</p>
           <nav aria-label="Rodapé — informações legais">
             <ul className="flex flex-wrap items-center justify-center gap-4">
               <li>
