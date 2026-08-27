@@ -41,15 +41,13 @@ export function SiteFooter({ settings }: { settings: SiteSettings | null }) {
     <footer className="border-t border-ink bg-ink text-ink-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          {/* TEMPORÁRIO: espaço reservado para o logotipo definitivo. */}
-          <div className="flex items-center gap-2">
-            <BrandMark className="h-9 w-9" tone="dark" />
-            {/* TEMPORÁRIO: substituir por nome/logotipo definitivo. */}
-            <span className="text-sm font-semibold text-ink-foreground">Criação de Sites</span>
-          </div>
+          <BrandLogo tone="dark" />
+          <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+            Sites profissionais para negócios que querem crescer
+          </p>
           <p className="mt-4 max-w-xs text-sm text-ink-muted">
-            Criação de sites profissionais para empresas, prestadores de serviços e pequenos
-            negócios.
+            Criação de sites profissionais, landing pages e catálogos digitais para pequenos
+            negócios, empresas locais e prestadores de serviços.
           </p>
           <div className="mt-5 flex gap-3">
             <a
