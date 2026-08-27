@@ -27,9 +27,9 @@ import esperaImg from "@/assets/lumina-espera.jpg";
 import salaImg from "@/assets/demo-odonto-sala.jpg";
 
 const CANONICAL = "https://supabasic-project-spark.lovable.app/modelos/clinica-odontologica";
-const TITLE = "Clínica Lumina Odontologia | Projeto demonstrativo SiteFluxo";
+const TITLE = "Clínica Lumina Odontologia | Projeto demonstrativo TRAZEVO";
 const DESCRIPTION =
-  "Modelo demonstrativo de site para clínica odontológica desenvolvido pela SiteFluxo.";
+  "Modelo demonstrativo de site para clínica odontológica desenvolvido pela TRAZEVO.";
 
 const WHATS = "5511999990000";
 const wa = (message: string) => `https://wa.me/${WHATS}?text=${encodeURIComponent(message)}`;
@@ -233,7 +233,7 @@ function LuminaPage() {
     <div style={palette} className="min-h-screen bg-white font-sans text-slate-700 antialiased">
       {/* Aviso de demonstração */}
       <div className="fixed inset-x-0 top-0 z-50 bg-[var(--lum-deep)] px-4 py-1.5 text-center text-[11px] leading-snug text-white/90 sm:text-xs">
-        Projeto demonstrativo criado pela SiteFluxo. Todas as informações apresentadas são
+        Projeto demonstrativo criado pela TRAZEVO. Todas as informações apresentadas são
         fictícias.
       </div>
 
@@ -742,7 +742,7 @@ function LuminaPage() {
             <p>
               Projeto conceitual desenvolvido pela{" "}
               <Link to="/" className="font-semibold text-white underline">
-                SiteFluxo
+                TRAZEVO
               </Link>
               .
             </p>

@@ -94,7 +94,7 @@ export function AboutSection() {
             </h2>
             <div className="mt-5 space-y-4 text-base text-ink-muted">
               <p>
-                Nossa agência nasceu com o objetivo de ajudar pequenos negócios, profissionais e
+                A TRAZEVO nasceu com o objetivo de ajudar pequenos negócios, profissionais e
                 empresas a construírem uma presença digital mais profissional.
               </p>
               <p>

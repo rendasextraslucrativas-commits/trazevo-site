@@ -27,8 +27,8 @@ import produtosImg from "@/assets/bravio-produtos.jpg";
 import atendimentoImg from "@/assets/bravio-atendimento.jpg";
 
 const CANONICAL = "https://sunshine-stack-start.lovable.app/modelos/barbearia-premium";
-const TITLE = "Bravio Barbearia | Projeto demonstrativo SiteFluxo";
-const DESCRIPTION = "Modelo demonstrativo de site para barbearia desenvolvido pela SiteFluxo.";
+const TITLE = "Bravio Barbearia | Projeto demonstrativo TRAZEVO";
+const DESCRIPTION = "Modelo demonstrativo de site para barbearia desenvolvido pela TRAZEVO.";
 
 const WHATS = "5511999992222";
 const wa = (message: string) => `https://wa.me/${WHATS}?text=${encodeURIComponent(message)}`;
@@ -275,7 +275,7 @@ function BravioPage() {
     >
       <div className="fixed inset-x-0 top-0 z-50">
         <p className="border-b border-[var(--bv-line)] bg-[var(--bv-graphite)] px-4 py-2 text-center text-[11px] leading-snug text-[var(--bv-muted)] sm:text-xs">
-          Projeto demonstrativo desenvolvido pela SiteFluxo. Todas as informações apresentadas são
+          Projeto demonstrativo desenvolvido pela TRAZEVO. Todas as informações apresentadas são
           fictícias.
         </p>
 
@@ -817,7 +817,7 @@ function BravioPage() {
             <p>
               Projeto conceitual desenvolvido pela{" "}
               <Link to="/" className="font-semibold text-[var(--bv-gold)] underline">
-                SiteFluxo
+                TRAZEVO
               </Link>
               .
             </p>

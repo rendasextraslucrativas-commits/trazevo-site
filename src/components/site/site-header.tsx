@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
-import { BrandMark } from "./brand-mark";
+import { BrandLogo } from "./brand-mark";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -31,21 +31,12 @@ export function SiteHeader({ settings }: { settings: SiteSettings | null }) {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
-        <Link to="/" className="flex items-center gap-2" aria-label="Página inicial">
+        <Link to="/" className="flex items-center gap-2" aria-label="TRAZEVO — página inicial">
           {settings?.logo_url ? (
-            <img
-              src={settings.logo_url}
-              alt="Criação de Sites"
-              className="h-8 w-auto"
-              loading="lazy"
-            />
+            <img src={settings.logo_url} alt="TRAZEVO" className="h-8 w-auto" loading="lazy" />
           ) : (
-            <BrandMark className="h-9 w-9" />
+            <BrandLogo />
           )}
-          <span className="text-sm font-semibold tracking-tight text-brand sm:text-base">
-            {/* TEMPORÁRIO: nome neutro até a definição da marca definitiva. */}
-            Criação de Sites
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navegação principal">

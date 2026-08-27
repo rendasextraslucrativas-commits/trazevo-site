@@ -35,9 +35,9 @@ import ruralImg from "@/assets/solaris-rural.jpg";
 import usinaImg from "@/assets/solaris-usina.jpg";
 
 const CANONICAL = "https://sunshine-stack-start.lovable.app/modelos/energia-solar";
-const TITLE = "Solaris Energia Solar | Projeto demonstrativo SiteFluxo";
+const TITLE = "Solaris Energia Solar | Projeto demonstrativo TRAZEVO";
 const DESCRIPTION =
-  "Modelo demonstrativo de site para empresa de energia solar desenvolvido pela SiteFluxo.";
+  "Modelo demonstrativo de site para empresa de energia solar desenvolvido pela TRAZEVO.";
 
 const WHATS = "5511999993333";
 const wa = (message: string) => `https://wa.me/${WHATS}?text=${encodeURIComponent(message)}`;
@@ -307,7 +307,7 @@ function SolarisPage() {
         className="fixed inset-x-0 top-0 z-50 px-4 py-2 text-center text-[11px] leading-snug sm:text-xs"
         style={{ background: "var(--sl-navy)", color: "#DCE7F5" }}
       >
-        Projeto demonstrativo desenvolvido pela SiteFluxo. Todas as informações apresentadas são
+        Projeto demonstrativo desenvolvido pela TRAZEVO. Todas as informações apresentadas são
         fictícias.
       </div>
 
@@ -740,7 +740,7 @@ function SolarisPage() {
             <p>
               Projeto conceitual desenvolvido pela{" "}
               <a href="/" className="font-semibold underline" style={{ color: "var(--sl-yellow)" }}>
-                SiteFluxo
+                TRAZEVO
               </a>
               .
             </p>
