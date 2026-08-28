@@ -40,6 +40,8 @@ export const Route = createFileRoute("/")({
           "Sites profissionais, landing pages e catálogos digitais para negócios que querem crescer.",
       },
       { property: "og:url", content: "https://sunshine-stack-start.lovable.app/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -57,18 +59,18 @@ function Index() {
   return (
     <SiteShell settings={data.settings}>
       {hero?.is_visible !== false ? (
-        <section className="border-b border-border bg-gradient-to-b from-surface to-background">
+        <section className="border-b border-ink/20 bg-ink text-ink-foreground">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 lg:grid-cols-2 lg:py-24">
             <div>
-              <p className="inline-flex items-center gap-2 rounded-full bg-brand-soft px-3 py-1.5 text-xs font-semibold tracking-wide text-brand-soft-foreground">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold tracking-wide text-ink-foreground">
                 <span className="font-extrabold uppercase tracking-[0.16em]">Trazevo</span>
                 <span aria-hidden className="h-3 w-px bg-current opacity-30" />
                 Sites profissionais para negócios que querem crescer
               </p>
-              <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-brand sm:text-4xl lg:text-5xl">
+              <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-ink-foreground sm:text-4xl lg:text-5xl">
                 {hero?.title}
               </h1>
-              <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
+              <p className="mt-5 max-w-xl text-base text-ink-muted sm:text-lg">
                 {hero?.subtitle}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -76,16 +78,16 @@ function Index() {
                   <Link to="/contato">Solicitar orçamento</Link>
                 </Button>
                 {SHOW_SHOWCASE ? (
-                  <Button asChild size="lg" variant="outline">
+                  <Button asChild size="lg" variant="outline" className="border-white/30 bg-transparent text-ink-foreground hover:bg-white/10 hover:text-ink-foreground">
                     <Link to="/" hash="portfolio">Ver portfólio</Link>
                   </Button>
                 ) : (
-                  <Button asChild size="lg" variant="outline">
+                  <Button asChild size="lg" variant="outline" className="border-white/30 bg-transparent text-ink-foreground hover:bg-white/10 hover:text-ink-foreground">
                     <Link to="/planos">Ver planos</Link>
                   </Button>
                 )}
                 {wa ? (
-                  <Button asChild size="lg" variant="ghost">
+                  <Button asChild size="lg" variant="ghost" className="text-ink-foreground hover:bg-white/10 hover:text-ink-foreground">
                     <a
                       href={wa}
                       target="_blank"
@@ -97,7 +99,7 @@ function Index() {
                   </Button>
                 ) : null}
               </div>
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
+              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-ink-muted">
                 {["Adaptado para celulares", "Integração com WhatsApp", "Atendimento personalizado"].map(
                   (item) => (
                     <li key={item} className="inline-flex items-center gap-2">
@@ -133,7 +135,9 @@ function Index() {
         </div>
       ) : null}
 
-      <PortfolioSection />
+      <section className="bg-background">
+        <PortfolioSection />
+      </section>
 
       <PricingSection />
 
@@ -151,7 +155,9 @@ function Index() {
 
       <AboutSection />
 
-      <FaqSection />
+      <section className="border-y border-border bg-surface">
+        <FaqSection />
+      </section>
 
       <ContactSection />
 

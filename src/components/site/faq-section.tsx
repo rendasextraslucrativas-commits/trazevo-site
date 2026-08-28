@@ -220,11 +220,11 @@ export function FaqSection() {
             <AccordionItem
               key={faq.id}
               value={faq.id}
-              className="rounded-2xl border border-border bg-card px-5 shadow-[var(--shadow-soft)] transition-shadow duration-300 data-[state=open]:shadow-[var(--shadow-card)]"
+              className="rounded-2xl border border-border bg-card px-5"
             >
               <AccordionTrigger className="py-5 text-base font-semibold text-brand hover:no-underline [&>svg]:hidden [&[data-state=open]_.icon-open]:hidden [&[data-state=closed]_.icon-close]:hidden">
                 <span className="flex items-center gap-3 pr-4 text-left">
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-accent text-accent-foreground">
                     <Plus className="icon-open h-4 w-4" aria-hidden />
                     <Minus className="icon-close h-4 w-4" aria-hidden />
                   </span>
@@ -239,7 +239,7 @@ export function FaqSection() {
         </Accordion>
       </div>
 
-      <div className="mt-12 rounded-2xl border border-border bg-surface p-6 text-center sm:p-10">
+      <div className="mt-12 rounded-2xl border border-border bg-background p-6 text-center sm:p-10">
         <h3 className="text-xl font-bold tracking-tight text-brand sm:text-2xl">
           Ainda ficou com alguma dúvida?
         </h3>

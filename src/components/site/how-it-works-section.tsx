@@ -97,10 +97,9 @@ export function HowItWorksSection({
           return (
             <li
               key={step.id}
-              className="animate-in fade-in slide-in-from-bottom-2 relative flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)] fill-mode-both"
-              style={{ animationDelay: `${index * 90}ms`, animationDuration: "500ms" }}
+              className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-5"
             >
-              <span className="absolute -top-3 left-5 grid h-8 w-8 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-[var(--shadow-soft)]">
+              <span className="absolute -top-3 left-5 grid h-8 w-8 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                 {index + 1}
               </span>
               <span className="mt-4 grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-accent text-accent-foreground">
@@ -115,7 +114,7 @@ export function HowItWorksSection({
         })}
       </ol>
 
-      <div className="mt-10 rounded-2xl border border-border bg-surface p-6 sm:p-8">
+      <div className="mt-10 rounded-2xl border border-border bg-background p-6 sm:p-8">
         <h3 className="flex items-center gap-2 text-lg font-semibold text-brand">
           <CalendarClock className="h-5 w-5 text-primary" aria-hidden />
           Quando o prazo começa a contar?
@@ -129,7 +128,7 @@ export function HowItWorksSection({
         </p>
       </div>
 
-      <div className="mt-10 rounded-2xl border border-border bg-card p-6 text-center shadow-[var(--shadow-soft)] sm:p-10">
+      <div className="mt-10 rounded-2xl border border-border bg-card p-6 text-center sm:p-10">
         <h3 className="text-xl font-bold tracking-tight text-brand sm:text-2xl">
           Pronto para começar seu projeto?
         </h3>
