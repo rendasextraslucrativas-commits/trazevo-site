@@ -5,17 +5,27 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system definition.
+ * Design System TRAZEVO — Paleta Oficial
  *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
+ * Navy:       #0B1F3A  -> oklch(0.25 0.06 262)
+ * Primary:    #2563EB  -> oklch(0.5461 0.2152 262.88)
+ * Primary Hv: #1D4ED8  -> oklch(0.50 0.19 262)
+ * Soft Blue:  #EFF6FF  -> oklch(0.97 0.01 260)
+ * Background: #F8FAFC  -> oklch(0.985 0.003 260)
+ * Surface:    #FFFFFF  -> oklch(1 0 0)
+ * Text:       #0F172A  -> oklch(0.2077 0.0398 265.75)
+ * Muted:      #64748B  -> oklch(0.55 0.04 260)
+ * Border:     #E2E8F0  -> oklch(0.91 0.01 260)
  *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ * Regra de uso:
+ * - Fundos alternam entre branco (#FFFFFF), background (#F8FAFC) e soft blue (#EFF6FF).
+ * - Navy (#0B1F3A) é reservado para Hero, CTAs de alto impacto, Footer e pequenas
+ *   áreas de contraste.
+ * - Primary Blue (#2563EB) é usado para CTAs, links, ícones, destaques e elementos
+ *   interativos.
+ * - Verde/vermelho/amarelo apenas para estados funcionais (sucesso, erro, alerta).
+ * - Evitar gradientes, glassmorphism, blur excessivo, sombras fortes, animações
+ *   decorativas e efeitos flutuantes.
  */
 
 @theme inline {
@@ -71,47 +81,53 @@
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: oklch(1 0 0);
   --font-sans: "Inter", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --shadow-soft: 0 1px 2px 0 oklch(0.2077 0.0398 265.75 / 0.06), 0 8px 24px -12px oklch(0.2077 0.0398 265.75 / 0.14);
-  --shadow-card: 0 1px 3px 0 oklch(0.2077 0.0398 265.75 / 0.06), 0 12px 32px -16px oklch(0.2077 0.0398 265.75 / 0.16);
+  /* Sombras extremamente sutis — usadas com parcimônia */
+  --shadow-soft: 0 1px 2px 0 oklch(0.2077 0.0398 265.75 / 0.04), 0 4px 12px -8px oklch(0.2077 0.0398 265.75 / 0.08);
+  --shadow-card: 0 1px 2px 0 oklch(0.2077 0.0398 265.75 / 0.05), 0 8px 20px -12px oklch(0.2077 0.0398 265.75 / 0.12);
 }
 
 :root {
   --radius: 1rem;
-  --background: oklch(1 0 0);
+  /* Background: #F8FAFC */
+  --background: oklch(0.985 0.003 260);
+  /* Text: #0F172A */
   --foreground: oklch(0.2077 0.0398 265.75);
+  /* Surface/Card: #FFFFFF */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2077 0.0398 265.75);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2077 0.0398 265.75);
-  /* Azul escuro institucional #0F172A */
-  --brand: oklch(0.2077 0.0398 265.75);
+  /* Navy #0B1F3A — marca e áreas de alto contraste */
+  --brand: oklch(0.25 0.06 262);
   --brand-foreground: oklch(1 0 0);
-  /* Azul principal #2563EB */
+  /* Primary Blue #2563EB — CTAs, links, ícones, destaques */
   --primary: oklch(0.5461 0.2152 262.88);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.9842 0.0034 247.86);
+  --secondary: oklch(0.97 0.01 260);
   --secondary-foreground: oklch(0.2077 0.0398 265.75);
-  --muted: oklch(0.9842 0.0034 247.86);
-  --muted-foreground: oklch(0.4455 0.0374 257.28);
-  /* Azul claro #DBEAFE */
-  --accent: oklch(0.9319 0.0316 255.59);
+  --muted: oklch(0.985 0.003 260);
+  /* Muted Text: #64748B */
+  --muted-foreground: oklch(0.55 0.04 260);
+  /* Soft Blue #EFF6FF */
+  --accent: oklch(0.97 0.01 260);
   --accent-foreground: oklch(0.2077 0.0398 265.75);
-  --brand-soft: oklch(0.9319 0.0316 255.59);
-  --brand-soft-foreground: oklch(0.4882 0.2172 264.38);
-  /* Cinza muito claro #F8FAFC */
-  --surface: oklch(0.9842 0.0034 247.86);
+  --brand-soft: oklch(0.97 0.01 260);
+  --brand-soft-foreground: oklch(0.5461 0.2152 262.88);
+  /* Surface branco puro para cards e seções claras */
+  --surface: oklch(1 0 0);
   --surface-foreground: oklch(0.2077 0.0398 265.75);
-  /* Seções escuras */
-  --ink: oklch(0.2077 0.0398 265.75);
+  /* Ink = Navy, usado em hero/footer/CTA */
+  --ink: oklch(0.25 0.06 262);
   --ink-foreground: oklch(1 0 0);
-  --ink-muted: oklch(0.8690 0.0198 252.89);
-  /* Verde WhatsApp #22C55E */
+  /* Texto secundário sobre navy */
+  --ink-muted: oklch(0.75 0.02 260);
+  /* WhatsApp #22C55E — funcional, não decorativo */
   --whatsapp: oklch(0.7227 0.1920 149.58);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  /* Cinza de bordas #E2E8F0 */
-  --border: oklch(0.9288 0.0126 255.51);
-  --input: oklch(0.9288 0.0126 255.51);
+  /* Border: #E2E8F0 */
+  --border: oklch(0.91 0.01 260);
+  --input: oklch(0.91 0.01 260);
   --ring: oklch(0.5461 0.2152 262.88);
   --chart-1: oklch(0.5461 0.2152 262.88);
   --chart-2: oklch(0.2077 0.0398 265.75);
@@ -122,55 +138,56 @@
   --sidebar-foreground: oklch(0.2077 0.0398 265.75);
   --sidebar-primary: oklch(0.5461 0.2152 262.88);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.9842 0.0034 247.86);
+  --sidebar-accent: oklch(0.97 0.01 260);
   --sidebar-accent-foreground: oklch(0.2077 0.0398 265.75);
-  --sidebar-border: oklch(0.9288 0.0126 255.51);
+  --sidebar-border: oklch(0.91 0.01 260);
   --sidebar-ring: oklch(0.5461 0.2152 262.88);
 }
 
 .dark {
+  /* Dark mode mantém a mesma identidade, com fundos navy e superfícies escuras */
   --brand: oklch(0.62 0.16 260);
   --brand-foreground: oklch(0.99 0.005 260);
-  --ink: oklch(0.2077 0.0398 265.75);
+  --ink: oklch(0.20 0.04 262);
   --ink-foreground: oklch(1 0 0);
-  --ink-muted: oklch(0.7107 0.0351 256.79);
-  --brand-soft: oklch(0.279 0.041 260.031);
-  --brand-soft-foreground: oklch(0.9319 0.0316 255.59);
+  --ink-muted: oklch(0.70 0.03 260);
+  --brand-soft: oklch(0.28 0.04 260);
+  --brand-soft-foreground: oklch(0.97 0.01 260);
   --whatsapp: oklch(0.7227 0.1920 149.58);
-  --surface: oklch(0.2 0.03 262);
+  --surface: oklch(0.22 0.03 262);
   --surface-foreground: oklch(0.984 0.003 247.858);
-  --background: oklch(0.129 0.042 264.695);
+  --background: oklch(0.15 0.04 264);
   --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
+  --card: oklch(0.22 0.03 262);
   --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
+  --popover: oklch(0.22 0.03 262);
   --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
+  --primary: oklch(0.65 0.18 262);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.28 0.04 260);
   --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
+  --muted: oklch(0.28 0.04 260);
+  --muted-foreground: oklch(0.70 0.03 260);
+  --accent: oklch(0.28 0.04 260);
   --accent-foreground: oklch(0.984 0.003 247.858);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
+  --ring: oklch(0.65 0.18 262);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar: oklch(0.22 0.03 262);
   --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-primary: oklch(0.65 0.18 262);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.28 0.04 260);
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --sidebar-ring: oklch(0.65 0.18 262);
 }
 
 @media (prefers-reduced-motion: reduce) {
