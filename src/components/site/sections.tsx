@@ -175,7 +175,7 @@ export function TemplatesGrid({ templates }: { templates: Template[] }) {
     <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {templates.map((template) => (
         <Card key={template.id} className="overflow-hidden border-border shadow-[var(--shadow-soft)]">
-          <div className="aspect-[16/10] bg-gradient-to-br from-brand/90 to-primary/80 p-5">
+          <div className="aspect-[16/10] bg-ink p-5">
             <p className="text-xs uppercase tracking-widest text-brand-foreground/80">
               {template.niche}
             </p>
