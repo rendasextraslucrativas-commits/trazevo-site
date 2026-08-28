@@ -193,9 +193,9 @@ export function ContactSection() {
               {infoBlocks.map((block) => (
                 <li
                   key={block.title}
-                  className="flex gap-4 rounded-xl border border-border bg-background p-4"
+                  className="flex gap-4 rounded-xl border border-border bg-card p-4"
                 >
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent text-accent-foreground">
                     <block.icon className="h-5 w-5" aria-hidden />
                   </span>
                   <div>
@@ -225,7 +225,7 @@ export function ContactSection() {
             </Button>
           </div>
 
-          <Card className="border-border bg-background">
+          <Card className="border-border bg-card">
             <CardContent className="p-6 sm:p-8">
               <form onSubmit={handleSubmit} noValidate className="space-y-5">
                 <div className="hidden" aria-hidden>
@@ -364,7 +364,7 @@ export function ContactSection() {
                 </Button>
 
                 {sent ? (
-                  <p role="status" className="rounded-lg bg-primary/10 p-3 text-sm text-foreground">
+                  <p role="status" className="rounded-lg bg-accent p-3 text-sm text-accent-foreground">
                     Solicitação enviada com sucesso. Entraremos em contato assim que possível.
                   </p>
                 ) : null}
@@ -378,7 +378,7 @@ export function ContactSection() {
           </Card>
         </div>
 
-        <div className="mt-14 rounded-2xl border border-border bg-background p-8 text-center sm:p-12">
+        <div className="mt-14 rounded-2xl border border-border bg-card p-8 text-center sm:p-12">
           <h3 className="text-2xl font-bold tracking-tight text-brand sm:text-3xl">
             Seu negócio merece uma presença digital profissional
           </h3>

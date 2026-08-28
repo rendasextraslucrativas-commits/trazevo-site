@@ -111,10 +111,10 @@ export function PortfolioSection() {
         {items.map((item) => (
           <article
             key={item.id}
-            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)]"
+            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card"
           >
             <div className="bg-surface p-4">
-              <div className="overflow-hidden rounded-xl border border-border bg-background shadow-sm">
+              <div className="overflow-hidden rounded-xl border border-border bg-background">
                 <div className="flex items-center gap-1.5 border-b border-border bg-card px-3 py-2">
                   <span className="h-2 w-2 rounded-full bg-muted-foreground/40" />
                   <span className="h-2 w-2 rounded-full bg-muted-foreground/40" />
@@ -126,7 +126,7 @@ export function PortfolioSection() {
                   width={1280}
                   height={800}
                   loading="lazy"
-                  className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="aspect-[16/10] w-full object-cover"
                 />
               </div>
             </div>

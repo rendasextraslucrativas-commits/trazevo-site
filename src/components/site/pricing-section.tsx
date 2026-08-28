@@ -112,14 +112,12 @@ export function PricingSection() {
             return (
               <Card
                 key={plan.id}
-                className={`relative flex h-full flex-col rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
-                  plan.highlighted
-                    ? "border-primary/50 shadow-[var(--shadow-card)] hover:shadow-lg"
-                    : "border-border shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)]"
+                className={`relative flex h-full flex-col rounded-2xl border-border bg-card ${
+                  plan.highlighted ? "border-primary" : ""
                 }`}
               >
                 {plan.highlighted ? (
-                  <Badge className="absolute -top-3 left-6">Mais escolhido</Badge>
+                  <Badge className="absolute -top-3 left-6 bg-primary text-primary-foreground">Mais escolhido</Badge>
                 ) : null}
                 <CardHeader className="pb-3">
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-accent text-accent-foreground">
@@ -157,7 +155,7 @@ export function PricingSection() {
           })}
         </div>
 
-        <div className="mt-10 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] sm:p-8">
+        <div className="mt-10 rounded-2xl border border-border bg-card p-6 sm:p-8">
           <h3 className="flex items-center gap-2 text-lg font-semibold text-brand">
             <CreditCard className="h-5 w-5 text-primary" aria-hidden />
             Condições de pagamento
@@ -170,7 +168,7 @@ export function PricingSection() {
               </li>
             ))}
           </ul>
-          <p className="mt-5 rounded-lg bg-surface p-4 text-xs leading-relaxed text-muted-foreground">
+          <p className="mt-5 rounded-lg bg-accent/60 p-4 text-xs leading-relaxed text-foreground">
             Domínio, hospedagem, banco de imagens, ferramentas pagas e serviços externos não estão
             incluídos nos valores iniciais, salvo quando informados na proposta comercial.
           </p>
